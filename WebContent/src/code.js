@@ -109,19 +109,29 @@ function create_lightbox_with(m) {
 
 var data = null;
 var graph = null;
+var max_val;
 function add_station_at(x, y, z, id, data, val) {
 	console.log("val[" + id + "]=" + val);
-	data.add({
-		id : id,
-		x : x,
-		y : y,
-		z : z,
-		style : val
-	});
+	if (id==1) {
+		
+	}
+	if ( typeof val != "undefined" ) {
+		data.add({
+			id : id,
+			x : x,
+			y : y,
+			z : z,
+			style : val
+		});		
+	}
 }
 
 /**/
 function get_parameter_value_selected(mapping, pos, val) {
+	console.log("e' stato richiesto in get_parameter_value_selected il parametro "
+			+ val);
+	return mapping[pos][val];
+
 	switch (val) {
 	case "temp":
 		return mapping[pos].temp;
@@ -146,16 +156,15 @@ function drawVisualization() {
 	// Create and populate a data table.
 	data = new vis.DataSet();
 	// create some nice looking data with mapping
-	var x = 0; /*
-				 * TODO Sostituire con coordinate GPS della stazione 0
-				 */
-	var y = 0; /*
-				 * TODO Sostituire con coordinate GPS della stazione 0
-				 */
+	var x = 42.4185;
+	var y = 11.0806;
 
 	add_station_at(x, y, 0, mapping[(mapping.length - 1)].id, data,
-			get_parameter_value_selected(mapping, (mapping.length - 1), $(
-					"#parametro_da_graficare").val()));
+			get_parameter_value_selected(mapping, 
+					(mapping.length - 1), 
+					$("#parametro_da_graficare").val())
+					
+		);
 	for (var i = mapping.length - 2; i >= 0; i--) {
 		var teta = Math.PI * (180 + mapping[i].bussola) / 180.;
 		// console.log("id: "+(i+1)+" teta: "+teta+"
@@ -171,22 +180,12 @@ function drawVisualization() {
 						"#parametro_da_graficare").val()));
 	}
 
-	function human_readable(nh) {
-		switch (nh) {
-		case 'temp':
-			return "Temperatura";
-		case 'vis_verticale':
-			return "Vis. verticale";
-		case 'vis_orizzontale':
-			return "Vis. orizzontale";
-		case 'count_pesci':
-			return "Censo / min";
-		case 'colore':
-			return "Colore";
-		default:
-			return "TODO";
-		}
-
+	function capitalize(str){
+		return str.substr(0,1).toUpperCase()+str.substr(1).toLowerCase();
+	}
+	
+	function human_readable(nh) {		
+		return capitalize(nh.replace("_"," "));		
 	}
 	// specify options
 	var options = {
@@ -214,7 +213,6 @@ function drawVisualization() {
 			for (var j = 0; j < mapping.length; j++) {
 				if (mapping[j].id == i) {
 					m = mapping[j].media;
-					// console.log("Trovato");
 					break;
 				}
 			}
