@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Project Baseline - Tyrrenian sea - Argentarola mapping </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+
+
+        <!-- jQuery library 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+      -->
+        
+      <!--
+      .ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: 14em;
+	background: rgba(0,0,20,0.8);
+	color: #ecf0f1;
+}
+ 
+      -->
+        <!-- jquery-ui
+        <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui.css">
+        <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui-structure.css">
+        <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui-theme.css">
+         -->
+         <!--
+           
+         ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget
+     -->
+         <link rel="stylesheet" href="/css/theme.css">
+	 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>  
+
+        <!-- vis.js -->
+        <script src="http://visjs.org/dist/vis.js"></script>  
+
+        <script src="src/mapping_argentarola.js"></script>  
+        <script src="src/code.js"></script>  
+
+        <style type="text/css">
+                body {
+                padding-top: 50px;
+                padding-bottom: 20px ;
+
+                font-family: 'Lato',sans-serif;
+                background: url('images/argentarola.jpg') ;    
+                background-attachment: fixed;
+
+                background-size: 100% ;
+                max-width: 100%;
+                min-width: 100%;
+            }
+            .container-fluid {
+                background-color: rgba(0, 0, 20, 0.8)!important;
+                color: #ecf0f1;
+            }
+            a {
+                color: #ecf0f1;
+            }
+            .navbar-default {
+  background-color: #3c85e7;
+  border-color: #005994;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #e7f053;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #e7f053;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #e7f053;
+  background-color: #005994;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #e7f053;
+  background-color: #005994;
+}
+.navbar-default .navbar-toggle {
+  border-color: #005994;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #005994;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #e7f053;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #e7f053;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #e7f053;
+    background-color: #005994;
+  }
+}
+
+            .panel-transparent {
+                background: none;
+            }
+
+            .thumbnail {
+                background-color: rgba(0,0,20, 0.9)!important;
+                background-image:  none;
+            }
+            .panel-transparent .panel-heading  {
+                background-color: rgba(0,0,20, 0.9)!important;
+                background-image:  none;
+                padding-left: 10%;
+                background: none;
+                color: #ecf0f1;
+                border: 0px;
+            }
+            .panel-transparent .panel-body  {
+                background-color: rgba(0,0,20, 0.8)!important;
+                background-image: none;
+                background: none;
+                color: #ecf0f1;
+                text-shadow: 0px 0px 0px #fff;
+
+                padding-top: 0px;
+                padding-left: 10%;
+                padding-right: 0px;
+                padding-bottom: 0px;
+            }
+            
+            .bs-example{
+                margin: 20px;
+            }
+            .modal-content iframe{
+                margin: 0 auto;
+                display: block;
+            }
+            .thumbnail .caption {
+                padding: 9px;
+                color: #ecf0f1;
+            }
+        </style>
+
+        <link rel="stylesheet" href="css/theme.css">
+       </head>
+    <body onload="todo_onload();">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Argentarola</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Map</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-transparent">
+                    <div class="panel-heading">
+                    <h4>
+                        Stazioni di monitoraggio dell'Argentarola
+                    </h4>
+                    </div>
+                    <div class="panel panel-body">
+                        <div class="row">
+                            <label for="parametro_da_graficare">Seleziona il parametro da graficare:</label>
+                            <select name="parametro_da_graficare" id="parametro_da_graficare" >
+                                <optgroup label="Dati oggettivi"> 
+                                    <option selected="selected" value="temp">Temperatura</option>
+                                    <option value="vis_verticale">Visibilità verticale</option>
+                                    <option value="vis_orizzontale">Visibilità orizzontale</option>
+                                </optgroup>
+                                <optgroup label="Dati soggettivi">
+                                    <option value="count_pesci">Conteggio pesci</option>
+                                    <option value="colore">Colore acqua</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div id="map3d">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-transparent">
+                    <div class="panel-heading" id="info_panel_heading">
+                        Info
+                    </div>
+                    <div class="panel panel-body" id="info_panel_body">
+                        <div id="media">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

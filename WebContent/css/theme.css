@@ -1,0 +1,217 @@
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.modal-content {
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.well {
+	background: rgba(0,0,40,0.6);
+}
+
+.modal-header {
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.modal-body {
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+button.close {
+	color: #ecf0f1;
+}
+
+.ui-button .ui-icon {
+	background-image: url("images/ui-icons_777777_256x240.png");
+}
+
+.ui-selectmenu-text {
+	display: block;
+	margin-right: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: 14em;
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5;
+	padding: 2px 0.4em;
+	margin: 0.5em 0 0 0;
+	height: auto;
+	border: 0;
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+.ui-widget.ui-widget-content {
+	border: 1px solid #c5c5c5;
+	background: rgba(0, 0, 20, 0.8);
+	color: #ecf0f1;
+}
+
+
+.container-fluid {
+	background-color: rgba(0, 0, 20, 0.8) !important;
+	color: #ecf0f1;
+}
+
+a {
+	color: #ecf0f1;
+}
+
+.navbar-default {
+	background-color: #3c85e7;
+	border-color: #005994;
+}
+
+.navbar-default .navbar-brand {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+	{
+	color: #e7f053;
+}
+
+.navbar-default .navbar-text {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+	{
+	color: #e7f053;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover,
+	.navbar-default .navbar-nav>.active>a:focus {
+	color: #e7f053;
+	background-color: #005994;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover,
+	.navbar-default .navbar-nav>.open>a:focus {
+	color: #e7f053;
+	background-color: #005994;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #005994;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+	{
+	background-color: #005994;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-link:hover {
+	color: #e7f053;
+}
+
+@media ( max-width : 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color: #ecf0f1;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+		.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+		color: #e7f053;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+		.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover,
+		.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+		color: #e7f053;
+		background-color: #005994;
+	}
+}
+
+.dropdown-menu {
+	background-color: rgb(0,0,20);
+}
+
+.panel-transparent {
+	background: none;
+}
+
+.thumbnail {
+	background-color: rgba(0, 0, 20, 0.9) !important;
+	background-image: none;
+}
+
+.panel-transparent .panel-heading {
+	background-color: rgba(0, 0, 20, 0.9) !important;
+	background-image: none;
+	padding-left: 10%;
+	background: none;
+	color: #ecf0f1;
+	border: 0px;
+}
+
+.panel-transparent .panel-body {
+	background-color: rgba(0, 0, 20, 0.8) !important;
+	background-image: none;
+	background: none;
+	color: #ecf0f1;
+	text-shadow: 0px 0px 0px #fff;
+	padding-top: 0px;
+	padding-left: 10%;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+.bs-example {
+	margin: 20px;
+}
+
+.modal-content iframe {
+	margin: 0 auto;
+	display: block;
+}
+
+.thumbnail .caption {
+	padding: 9px;
+	color: #ecf0f1;
+}
+
+.img-thumbnail {
+	padding: 0px;
+}
+
+.dropdown-menu > li > a {
+	color: #ffffff;
+}
