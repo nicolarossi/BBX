@@ -6,18 +6,19 @@ and open the template in the editor.
 -->
 <html>
 <head>
-<title>Project Baseline - Tyrrenian sea - Argentarola mapping</title>
+<title>Big Blue eXplorers - GUE Affiliate</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- Latest compiled and minified CSS -->
 <!-- 
 <link rel="stylesheet"
 	href="css/bootstrap.css">
  -->
- 
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
- 
+
 
 <!--  
 <link rel="stylesheet"
@@ -39,8 +40,9 @@ and open the template in the editor.
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
  -->
-<script
-	src="js/bootstrap.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="src/slider.js"></script>
 
 <link rel="stylesheet" href="css/theme.css">
 <style>
@@ -54,7 +56,69 @@ body {
 	max-width: 100%;
 	min-width: 100%;
 }
+
+.w3-content.w3-section {
+	position: relative;
+}
+
+#bkimg {
+	background-size: cover;
+	background-position: center;
+	background-image: url(images/carousel/slide20.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.w3-animate-fading {
+	-webkit-animation: fading 10s infinite;
+	animation: fading 10s infinite;
+	position: relative;
+	z-index: 9999;
+}
+
+.w3-animate-fading {
+	-webkit-animation: fading 10s infinite;
+	animation: fading 10s infinite;
+	position: relative;
+	z-index: 9999;
+}
+
+@
+-webkit-keyframes fading { 0%{
+	opacity: 0
+}
+
+100%{
+opacity
+:
+1
+}
+}
+@
+keyframes fading { 0%{
+	opacity: 0
+}
+
+100%{
+opacity
+:
+1
+}
+}
+.mySlides, #bkimg {
+	border: 1px solid rgb(231, 240, 83);
+	border-radius: 5px;
+}
 </style>
+<script>
+	$(document).ready(function() {
+		carousel();
+	});
+</script>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -64,31 +128,34 @@ body {
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Staff <span class="caret"></span></a>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Staff <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><img src="images/claudio_provenzani.jpg"
-								class="img-thumbnail" width="40" height="40">Claudio
-								Provenzani</a></li>
-						<li><a href="#">Andrea D'Ambrosio</a></li>
-						<li><a href="#">Antonio Pietrini</a></li>
-						<li><a href="#">Elena Romano</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Project <span class="caret"></span></a>
+						<li><a href="staff.html#claudio_provenzani"><img
+								src="images/staff/claudio_provenzani.jpg" class="img-thumbnail"
+								width="40" height="40"> Claudio Provenzani</a></li>
+						<li><a href="staff.html#claudio_provenzani"><img
+								src="images/staff/andrea_d_ambrosi.jpg" class="img-thumbnail"
+								width="40" height="40"> Andrea D'Ambrosio</a></li>
+						<li><a href="staff.html#antonio_pietrini"><img
+								src="images/staff/antonio_pietrini.jpg" class="img-thumbnail"
+								width="40" height="40"> Antonio Pietrini</a></li>
+						<li><a href="staff.html#elena_romano"><img
+								src="images/staff/elena_romano.jpg" class="img-thumbnail"
+								width="40" height="40"> Elena Romano</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Progetti<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="/argentarola.html"><img
 								src="images/argentarola.jpg" class="img-thumbnail" width="40"
 								height="40">Argentarola</a></li>
 						<li><a href="#">PB Tyrrenian sea</a></li>
-						<li><a href="#">Antonio Pietrini</a></li>
-						<li><a href="#">Elena Romano</a></li>
 					</ul></li>
 
 
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Course <span class="caret"></span></a>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Corsi <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="https://www.gue.com/content/gue-fundamentals">Fundamentals</a></li>
 						<li><a href="#">Rec 1-2-3 Trimix</a></li>
@@ -99,6 +166,52 @@ body {
 		</div>
 	</nav>
 	<div class="container">
+		<div class="row">
+			<div class="w3-content w3-section col-sm-offset-6"
+				style="max-width: 500px">
+				<div id="bkimg"></div>
+				<img class="mySlides w3-animate-fading"
+					src="images/carousel/slide01.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide02.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide03.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide04.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide05.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide06.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide07.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide08.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide09.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide10.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide11.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide12.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide13.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide14.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide15.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide16.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide17.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide18.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide19.jpg" style="width: 100%"> <img
+					class="mySlides w3-animate-fading"
+					src="images/carousel/slide20.jpg" style="width: 100%">
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="col-sm-4">
