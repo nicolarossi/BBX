@@ -1,10 +1,11 @@
 
-function create_carousel_with(m) {
+function create_carousel_with(m,id_carousel) {
 
-	var str = '<div id="myCarousel" class="carousel slide" data-ride="carousel">';
+	
+	var str = '<div id="'+id_carousel+'" class="carousel slide" data-ride="carousel">';
 	str += '<ol class="carousel-indicators">'
 	var k = 0;
-	for (var i = 0; i < m.length; i++) {
+	for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 		if (m[i].type != "img")
 			continue;
 		console.log(i + "URL:" + m[i].url);
@@ -12,14 +13,14 @@ function create_carousel_with(m) {
 		if (k == 0) {
 			active = 'class="active"';
 		}
-		str += '<li data-target="#myCarousel" data-slide-to="' + k + '" '
+		str += '<li data-target="#'+id_carousel+'" data-slide-to="' + k + '" '
 				+ active + '></li>'
 		k++;
 	}
 	str += '</ol>'; /**/
 	var k = 0;
 	str += '<div class="carousel-inner" role="listbox">';
-	for (var i = 0; i < m.length; i++) {
+	for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 		if (m[i].type != "img")
 			continue;
 		var active = "";
@@ -27,14 +28,15 @@ function create_carousel_with(m) {
 			active = 'active';
 		}
 		str += '<div class="item ' + active + '"><img src="' + m[i].url
-				+ '" alt="' + m[i].description + '"></div>';
+				+ '" style="width:100%" alt="' + m[i].description + '">'+
+				'<div class="carousel-caption"><h3>' + m[i].description + '</h3></div></div>';
 		k++;
 	}
 	str += '</div>';
 	/**/
 
 	if (k != 0) {
-		str += ' <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
+		str += ' <a class="left carousel-control" href="#'+id_carousel+'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#'+id_carousel+'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
 	}
 	str += "</div>";
 	return str;
@@ -53,7 +55,7 @@ function create_lightbox_with(m) {
 	str += '<div class="offset-md- 1  col-md-10">';
 	var modal = "";
 	var k = -1;
-	for (var i = 0; i < m.length; i++) {
+	for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 		if (m[i].type != 'video')
 			continue;
 		k++;
@@ -131,24 +133,29 @@ function get_parameter_value_selected(mapping, pos, val) {
 	console.log("e' stato richiesto in get_parameter_value_selected il parametro "
 			+ val);
 	return mapping[pos][val];
+}
 
-	switch (val) {
-	case "temp":
-		return mapping[pos].temp;
-	case "vis_verticale":
-		return mapping[pos].vis_verticale;
-	case "vis_orizzontale":
-		return mapping[pos].vis_orizzontale;
-	case "count_pesci":
-		return mapping[pos].count_pesci;
-	case "colore":
-		return mapping[pos].colore;
-	default:
-		console
-				.log("ATTENZIONE e' stato richiesto in get_parameter_value_selected il parametro "
-						+ val);
-		break;
+function create_media_from(node){
+	var rv=[];
+	for (var k in node) {
+//		console.log( " key = "+k);
+		if (typeof db[k] == "undefined") {
+			console.log("TOADD  '"+k+"' : {url : \"media/"+k+".jpg\",description : \"Breve descrizione\" }");
+			continue;
+		}
+		desc_ = db[k].description;
+		if (desc_== "Breve descrizione"){
+			desc_ = ""+k;
+		}
+		url_  = db[k].url ;
+		
+		rv.push({
+			type : "img",
+			url : url_,
+			description : desc_
+		});
 	}
+	return rv;
 }
 // Called when the Visualization API is loaded.
 function drawVisualization() {
@@ -206,13 +213,15 @@ function drawVisualization() {
 		onclick : function(point) {
 			$("#media")
 					.replaceWith(
-							'<div id="media"><div id="media_img"></div><div id="media_video"></div></div>');
+							'<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
 
 			var i = point.id;
 			var m = null;
+			var mapping_selected;
 			for (var j = 0; j < mapping.length; j++) {
 				if (mapping[j].id == i) {
 					m = mapping[j].media;
+					mapping_selected=mapping[j];
 					break;
 				}
 			}
@@ -220,23 +229,57 @@ function drawVisualization() {
 				console.log("Non abbiamo trovato " + i);
 			}
 
-			$("#info_panel_heading").html("Info su stazione #" + i);
-
-			/* Aggiungiamo un carousel */
-			var str = create_carousel_with(m);
-
-			$("#media_img")
+			var divers="";
+			for (i=0;i<mapping_selected.divers.length;i++){
+				if (i>0) {
+					if (i==mapping_selected.divers.length-1) {
+						divers+=" e ";
+					} else {
+						divers+=", ";
+					}
+				}
+				divers+=mapping_selected.divers[i];
+			}
+			
+			$("#info_panel_heading").html("<h4>Info su stazione #" + i+" monitorata da: "+divers+"</h4>");
+			var padding_str='style="padding-top: 0  ; padding-left: 0 ; padding-right: 0 ; padding-bottom:0 ;" ';
+//			var padding_str='style="padding-top:0" ';
+					/* Aggiungiamo un carousel */
+			var tmp=create_media_from(mapping_selected.benthos);
+			if ((typeof tmp != "undefined")&&(tmp.length!= 0)) {
+				var str = create_carousel_with(tmp,"carousel_benthos");
+				$("#media_benthos")
+						.replaceWith(
+								'<div id="media_benthos"><div class="panel panel-transparent"><div class="panel-heading"><h4>Benthos presente</h4></div><div class="panel-body" '+padding_str+' id="img_benthos">'
+										+ str + '</div></div></div>');				
+			}
+			
+			var tmp=create_media_from(mapping_selected.pesci);
+			if ((typeof tmp != "undefined")&&(tmp.length!= 0)) {
+				var str = create_carousel_with(tmp,"carousel_pesci");
+				$("#media_pesci")
 					.replaceWith(
-							'<div id="media_img"><div class="panel panel-transparent"><div class="panel-heading">Immagini</div><div class="panel-body" id="img_body">'
-									+ str + '</div></div></div>');
+							'<div id="media_pesci"><div class="panel panel-transparent"><div class="panel-heading"><h4>Pesci censiti</h4></div><div class="panel-body" '+padding_str+' id="img_pesci">'
+							+ str + '</div></div></div>');
+			}
+			
+			if ((typeof m != "undefined")&&(m.length!=00)) {
+				var str = create_carousel_with(m,"carousel_img");				
+				$("#media_img")
+						.replaceWith(
+								'<div id="media_img"><div class="panel panel-transparent"><div class="panel-heading"><h4>Immagini raccolte</h4></div><div class="panel-body" '+padding_str+' id="img_body">'
+										+ str + '</div></div></div>');				
+			}
+		
+			if ((typeof m != "undefined")&&(m.length!=00)) {
+				var str = create_lightbox_with(m);
+				$("#media_video")
+						.replaceWith(
+								'<div id="media_video"><div class="panel panel-transparent"><div class="panel-heading"><h4>Video raccolti</h4></div><div class="panel-body" '+padding_str+' id="video_body">'
+										+ str + '</div></div></div>');				
+			}
 
-			var str = create_lightbox_with(m);
-			$("#media_video")
-					.replaceWith(
-							'<div id="media_video"><div class="panel panel-transparent"><div class="panel-heading">Video</div><div class="panel-body" id="video_body">'
-									+ str + '</div></div></div>');
-
-			for (var i = 0; i < m.length; i++) {
+			for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 				if (m[i].type != 'video')
 					continue;
 				/*

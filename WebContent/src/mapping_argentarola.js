@@ -3,12 +3,12 @@ var mapping = [ {
 	depth : 50,
 	bussola : 110,
 	dist : 0,	
-	divers : "Cedurno - Daviano",
+	divers : [ "Cedurno" , "Daviano"],
 	intensita_corrente: 0,
 	temperatura : 12,
 	fondale : "fango",
 	visibilita : 2,
-	benthos  :  { gorgonie : 1 , cavolini : 1 , isolane : 1 } ,
+	benthos  :  { "gorgonie" : 1 , "cavolini" : 1 , "isolane" : 1 } ,
 	impatto_umano : 0
 }, {
 	id : 10,
@@ -22,7 +22,7 @@ var mapping = [ {
 
 	temperatura : 13,
 	fondale : "fango",
-	benthos  :  { malcion : 1 , palmatum: 1 , gorgonie : 1 ,gavowni : 1} ,
+	benthos  :  { "malcion" : 1 , "palmatum": 1 , "gorgonie" : 1 ,"gavowni" : 1} ,
 	impatto_umano : 0,
 	colore : 1 /* fmGJqTd0Qt8 */
 
@@ -31,6 +31,7 @@ var mapping = [ {
 	depth : 39.3,
 	bussola : 150,
 	dist : 15,
+	divers: ["Massimo Papini","Francesca Marini"],
 	
 	visibilita : 4,	
 	intensita_corrente: 1,
@@ -45,7 +46,7 @@ var mapping = [ {
 	depth : 35,
 	bussola : 150,
 	dist : 7,
-	divers: "massimo papini",
+	divers: ["Massimo Papini","Francesca Marini"],
 	temperatura : 12,
 	intensita_corrente: 0,
 	visibilita : 5,

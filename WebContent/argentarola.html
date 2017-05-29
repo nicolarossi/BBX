@@ -50,6 +50,7 @@ and open the template in the editor.
 
         <script src="src/mapping_argentarola.js"></script>  
         <script src="src/code.js"></script>  
+        <script src="src/db.js"></script>  
 
         <style type="text/css">
                 body {
@@ -187,18 +188,52 @@ and open the template in the editor.
        </head>
     <body onload="todo_onload();">
 
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Argentarola</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Map</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="row">
+<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">BBX</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li ><a href="/">Home</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Staff <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="staff.html"><img
+								src="images/staff/claudio_provenzani.jpg" class="img-thumbnail"
+								width="40" height="40"> Claudio Provenzani</a></li>
+						<li><a href="staff.html"><img
+								src="images/staff/andrea_d_ambrosi.jpg" class="img-thumbnail"
+								width="40" height="40"> Andrea D'Ambrosio</a></li>
+						<li><a href="staff.html"><img
+								src="images/staff/antonio_pietrini.jpg" class="img-thumbnail"
+								width="40" height="40"> Antonio Pietrini</a></li>
+						<li><a href="staff.html"><img
+								src="images/staff/elena_romano.jpg" class="img-thumbnail"
+								width="40" height="40"> Elena Romano</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Progetti<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/argentarola.html"><img
+								src="images/argentarola.jpg" class="img-thumbnail" width="40"
+								height="40">Argentarola</a></li>
+						<li><a href="#">PB Tyrrenian sea</a></li>
+					</ul></li>
+
+
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Corsi <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.gue.com/content/gue-fundamentals">Fundamentals</a></li>
+						<li><a href="#">Rec 1-2-3 Trimix</a></li>
+						<li><a href="#">DPV</a></li>
+						<li><a href="#">Documentation</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="">
+	    <div class="row">
             <div class="col-xs-6">
                 <div class="panel panel-transparent">
                     <div class="panel-heading">
@@ -225,17 +260,18 @@ and open the template in the editor.
             <div class="col-xs-6">
                 <div class="panel panel-transparent">
                     <div class="panel-heading" id="info_panel_heading">
-                        Info
+                        <h4>Info</h4>
                     </div>
                     <div class="panel panel-body" id="info_panel_body">
                         <div id="media">
-
+						<div class="well well-sm">Selezionando la stazione di monitoraggio nel pannello di sinistra, qui potrai visualizzare le informazioni, e il materiale multimediale, raccolti nella stazione cliccata</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
+</div>
+    
     </body>
 </html>
