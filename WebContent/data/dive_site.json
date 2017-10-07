@@ -1,0 +1,24 @@
+{"type":"FeatureCollection",
+ "features":[
+
+     {"type"	:"Feature",
+	      "id":"Asia wreck ",
+	      "properties":{
+		  "id":"Asia wreck ",
+                  "description" : "A dredger ship sunk off Civitavecchia harbour on April 4, 1987 due to a bad weather. It lies on 40 m depth in navigation position. ",
+                  "how_many_dives" : "1 "
+               },
+               "geometry": { "type": "Point", "coordinates": [ 11.801905 , 42.045907 ]}  
+     }
+,
+     {"type"	:"Feature",
+	      "id":"Banco S.Croce ",
+	      "properties":{
+		  "id":"Banco S.Croce ",
+                  "description" : "Banco S.Croce is located in Campania, about 300 m off the coast connecting Castellammare di Stabia and Vico Equense: It's formed by five large rocky pinnacles emerging from 50-60m water depth on a sandy bottom, with walls more or less steep depending on the different sides, and colonized by large forest of gorgonians and false black corals. These rocky pinnacles are full of break and crevices that provide shelter to many species of fish, especially groupers and forkbeards. In the last years it has been recognized a a preferential site for the deposition of eggs by small-spotted catshark (Scyliorhinus stellaris). ",
+                  "how_many_dives" : "1 "
+               },
+               "geometry": { "type": "Point", "coordinates": [ 14.419038 , 40.67606 ]}  
+     }
+ ]}
+
