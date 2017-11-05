@@ -113,7 +113,7 @@ var data = null;
 var graph = null;
 var max_val;
 function add_station_at(x, y, z, id, data, val) {
-	console.log("val[" + id + "]=" + val);
+	//console.log("val[" + id + "]=" + val);
 	if (id==1) {
 		
 	}
@@ -130,8 +130,7 @@ function add_station_at(x, y, z, id, data, val) {
 
 /**/
 function get_parameter_value_selected(mapping, pos, val) {
-	console.log("e' stato richiesto in get_parameter_value_selected il parametro "
-			+ val);
+	//console.log("e' stato richiesto in get_parameter_value_selected il parametro "			+ val);
 	return mapping[pos][val];
 }
 
@@ -204,6 +203,16 @@ function drawVisualization() {
 		showPerspective : true,
 		showGrid : true,
 		showShadow : true,
+		yValueLabel : function(value) {
+		    var s=Math.round( ((value/1583)+25.110)*1000)/1000;
+		    return "N 42° " +s + " '" ;
+		},
+		xValueLabel : function(value) {
+		    var s=Math.round( ((value/1583)+4.839)*1000)/1000;
+		    return "E 11° " +s + " '" ;
+		},
+	    xLabel : "",
+	    yLabel : "",
 		zValueLabel : function(value) {
 			return -value;
 		}/*

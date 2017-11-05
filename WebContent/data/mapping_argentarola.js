@@ -144,7 +144,8 @@ var mapping = [ {
 }, {
 	id : 1,
 	depth : 0,
-	bussola : 0,
+    bussola : 0,
+    divers: [ "BBX" ],
 	temperatura : 15,
 	intensita_corrente : 0,
 	visibilita:30,
