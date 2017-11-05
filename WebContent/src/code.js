@@ -1,4 +1,104 @@
 
+function print_transetti() {
+ var str=''	;
+    str+='<div class="panel-heading" id="info_panel_heading">';
+    str+='<h4>Transetti</h4>';
+    str+='</div>';
+    str+='<div class="panel panel-body" id="info_panel_body">';
+    str+='<div id="media">';
+    str+='<div class="well well-sm">';
+    str+='<div class="table-responsive">';
+    str+='<table class="table">';
+    str+='<thead>';
+    str+='<tr>';
+    str+='<th>Partenza </th>';
+    str+='<th>  </th>';
+    str+='<th>Arrivo </th>';
+    str+='<th>Direzione bussola</th>';
+    str+='<th>Distanza</th>';
+    str+='</tr>';
+    str+='</thead>';
+    str+='<tbody>';
+    str+='<tr>';
+    str+='<td> N 42&deg; 25.110\', E 11&deg; 4.839\' </td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 1</td>';
+    str+='<td>160&deg;</td>';
+    str+='<td>8m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 1</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 2</td>';
+    str+='<td>120&deg;</td>';
+    str+='<td>10m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 2</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 3</td>';
+    str+='<td>130&deg;</td>';
+    str+='<td>18m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 3</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 4</td>';
+    str+='<td>130&deg;</td>';
+    str+='<td>10m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 4</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 5</td>';
+    str+='<td>150&deg;</td>';
+    str+='<td>9m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 5</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 6</td>';
+    str+='<td>150&deg;</td>';
+    str+='<td>8m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 6</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 7</td>';
+    str+='<td>150&deg;</td>';
+    str+='<td>10m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 7</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 8</td>';
+    str+='<td>150&deg;</td>';
+    str+='<td>7m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 8</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 9</td>';
+    str+='<td>120&deg;</td>';
+    str+='<td>15m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 9</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 10</td>';
+    str+='<td>110&deg;</td>';
+    str+='<td>21m</td>';
+    str+='</tr>';
+    str+='</tbody>';
+    str+='</table>';
+    str+='</div>';
+    str+='</div>';
+    str+='</div>';
+    
+    $("#tabella_transetti").replaceWith(str);
+}
+
+
 function create_carousel_with(m,id_carousel) {
 
 	
@@ -224,18 +324,18 @@ function drawVisualization() {
 					.replaceWith(
 							'<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
 
-			var i = point.id;
+			var id = point.id;
 			var m = null;
 			var mapping_selected;
 			for (var j = 0; j < mapping.length; j++) {
-				if (mapping[j].id == i) {
+				if (mapping[j].id == id) {
 					m = mapping[j].media;
 					mapping_selected=mapping[j];
 					break;
 				}
 			}
 			if (m == null) {
-				console.log("Non abbiamo trovato " + i);
+				console.log("Non abbiamo trovato " + id);
 			}
 
 			var divers="";
@@ -250,7 +350,7 @@ function drawVisualization() {
 				divers+=mapping_selected.divers[i];
 			}
 			
-			$("#info_panel_heading").html("<h4>Info su stazione #" + i+" monitorata da: "+divers+"</h4>");
+			$("#info_panel_heading").html("<h4>Info su stazione #" + id+" monitorata da: "+divers+"</h4>");
 			var padding_str='style="padding-top: 0  ; padding-left: 0 ; padding-right: 0 ; padding-bottom:0 ;" ';
 //			var padding_str='style="padding-top:0" ';
 					/* Aggiungiamo un carousel */

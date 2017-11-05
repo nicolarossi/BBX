@@ -185,6 +185,11 @@ and open the template in the editor.
         </style>
 
         <link rel="stylesheet" href="css/theme.css">
+	<script>
+	  $(document).ready(function(){
+	  print_transetti();
+	  });
+	</script>
        </head>
     <body onload="todo_onload();">
 
@@ -267,10 +272,13 @@ and open the template in the editor.
                     </div>
                     <div class="panel panel-body" id="info_panel_body">
                         <div id="media">
-						<div class="well well-sm">Selezionando la stazione di monitoraggio nel pannello di sinistra, qui potrai visualizzare le informazioni, e il materiale multimediale, raccolti nella stazione cliccata</div>
+			  <div class="well well-sm">Selezionando la stazione di monitoraggio nel pannello di sinistra, qui potrai visualizzare le informazioni, e il materiale multimediale, raccolti nella stazione cliccata</div>
                         </div>
                     </div>
-                </div>
+
+		    
+		    <div id="tabella_transetti">
+                    </div>
             </div>
         </div>
 
