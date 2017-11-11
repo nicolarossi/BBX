@@ -1,4 +1,109 @@
-
+function handle_click_on_station(point) {
+    $("#media")
+	.replaceWith(
+	    '<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
+    
+    var id = point.id;
+    var m = null;
+    var mapping_selected;
+    for (var j = 0; j < mapping.length; j++) {
+	if (mapping[j].id == id) {
+	    m = mapping[j].media;
+	    mapping_selected=mapping[j];
+	    break;
+	}
+    }
+    if (m == null) {
+	console.log("Non abbiamo trovato " + id);
+    }
+    
+    var divers="";
+    for (i=0;i<mapping_selected.divers.length;i++){
+	if (i>0) {
+	    if (i==mapping_selected.divers.length-1) {
+		divers+=" e ";
+	    } else {
+		divers+=", ";
+	    }
+	}
+	divers+=mapping_selected.divers[i];
+    }
+			
+    $("#info_panel_heading").html("<h4>Info su stazione #" + id+" monitorata da: "+divers+"</h4>");
+    var padding_str='style="padding-top: 0  ; padding-left: 0 ; padding-right: 0 ; padding-bottom:0 ;" ';
+    //			var padding_str='style="padding-top:0" ';
+    /* Aggiungiamo un carousel */
+    var tmp=create_media_from(mapping_selected.benthos);
+    if ((typeof tmp != "undefined")&&(tmp.length!= 0)) {
+	var str = create_carousel_with(tmp,"carousel_benthos");
+	$("#media_benthos")
+	    .replaceWith(
+		'<div id="media_benthos"><div class="panel panel-transparent"><div class="panel-heading"><h4>Benthos presente</h4></div><div class="panel-body" '+padding_str+' id="img_benthos">'
+		    + str + '</div></div></div>');				
+    }
+    
+    var tmp=create_media_from(mapping_selected.pesci);
+    if ((typeof tmp != "undefined")&&(tmp.length!= 0)) {
+	var str = create_carousel_with(tmp,"carousel_pesci");
+	$("#media_pesci")
+	    .replaceWith(
+		'<div id="media_pesci"><div class="panel panel-transparent"><div class="panel-heading"><h4>Pesci censiti</h4></div><div class="panel-body" '+padding_str+' id="img_pesci">'
+		    + str + '</div></div></div>');
+    }
+    
+    if ((typeof m != "undefined")&&(m.length!=00)) {
+	var str = create_carousel_with(m,"carousel_img");				
+	$("#media_img")
+	    .replaceWith(
+		'<div id="media_img"><div class="panel panel-transparent"><div class="panel-heading"><h4>Immagini raccolte</h4></div><div class="panel-body" '+padding_str+' id="img_body">'
+		    + str + '</div></div></div>');				
+    }
+    
+    if ((typeof m != "undefined")&&(m.length!=00)) {
+	var str = create_lightbox_with(m);
+	$("#media_video")
+	    .replaceWith(
+		'<div id="media_video"><div class="panel panel-transparent"><div class="panel-heading"><h4>Video raccolti</h4></div><div class="panel-body" '+padding_str+' id="video_body">'
+		    + str + '</div></div></div>');				
+    }
+    
+    for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
+	if (m[i].type != 'video')
+	    continue;
+	/*
+	 * Get iframe src attribute value i.e. YouTube video url and
+	 * store it in a variable
+	 */
+	
+	var s = "#video_modal_" + i
+	$(s).ready(function() {
+	    var url = $("#id_video_" + i).attr('src');
+	    console.log("url=" + url);
+	    /*
+	     * Assign empty url value to the iframe src attribute when
+	     * modal hide, which stop the video playing
+	     */
+	    console.log("Trovato?: " + i);
+	    console.log($("#video_modal_" + i));
+	    
+	    $(s).on('hidden.bs.modal', function(e) {
+		console.log("Hello closing #id_video_" + i);
+		$("#id_video_" + i).attr('src', '');
+	    });
+	    
+	    /*
+	     * Assign the initially stored url back to the iframe src
+	     * attribute when modal is displayed again
+	     */
+	    $("#video_modal_" + i).on('shown.bs.modal', function(e) {
+		console.log("show url=" + url);
+		$("#id_video_" + i).attr('src', url);
+	    });
+	});
+	
+    }
+    
+}
 function print_transetti() {
  var str=''	;
     str+='<div class="panel-heading" id="info_panel_heading">';
@@ -223,7 +328,8 @@ function add_station_at(x, y, z, id, data, val) {
 			x : x,
 			y : y,
 			z : z,
-			style : val
+		    style : val,
+		    title: 'Stazione: '+id
 		});		
 	}
 }
@@ -290,8 +396,10 @@ function drawVisualization() {
 		return str.substr(0,1).toUpperCase()+str.substr(1).toLowerCase();
 	}
 	
-	function human_readable(nh) {		
-		return capitalize(nh.replace("_"," "));		
+    function human_readable(nh) {
+	if (nh=="temperatura") return capitalize(nh.replace("_"," "))+" C";
+	if (nh=="visibilita") return capitalize(nh.replace("_"," "))+" m";
+	return capitalize(nh.replace("_"," "))+" m/minuto";
 	}
 	// specify options
 	var options = {
@@ -313,118 +421,30 @@ function drawVisualization() {
 		},
 	    xLabel : "",
 	    yLabel : "",
-		zValueLabel : function(value) {
-			return -value;
-		}/*
-			 * , tooltip: function (point) { return '<strong>Stazione:</strong><b>' +
-			 * point.data.id + '</b><br>'; }
-			 */,
-		onclick : function(point) {
-			$("#media")
-					.replaceWith(
-							'<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
-
-			var id = point.id;
-			var m = null;
-			var mapping_selected;
-			for (var j = 0; j < mapping.length; j++) {
-				if (mapping[j].id == id) {
-					m = mapping[j].media;
-					mapping_selected=mapping[j];
-					break;
-				}
-			}
-			if (m == null) {
-				console.log("Non abbiamo trovato " + id);
-			}
-
-			var divers="";
-			for (i=0;i<mapping_selected.divers.length;i++){
-				if (i>0) {
-					if (i==mapping_selected.divers.length-1) {
-						divers+=" e ";
-					} else {
-						divers+=", ";
-					}
-				}
-				divers+=mapping_selected.divers[i];
-			}
-			
-			$("#info_panel_heading").html("<h4>Info su stazione #" + id+" monitorata da: "+divers+"</h4>");
-			var padding_str='style="padding-top: 0  ; padding-left: 0 ; padding-right: 0 ; padding-bottom:0 ;" ';
-//			var padding_str='style="padding-top:0" ';
-					/* Aggiungiamo un carousel */
-			var tmp=create_media_from(mapping_selected.benthos);
-			if ((typeof tmp != "undefined")&&(tmp.length!= 0)) {
-				var str = create_carousel_with(tmp,"carousel_benthos");
-				$("#media_benthos")
-						.replaceWith(
-								'<div id="media_benthos"><div class="panel panel-transparent"><div class="panel-heading"><h4>Benthos presente</h4></div><div class="panel-body" '+padding_str+' id="img_benthos">'
-										+ str + '</div></div></div>');				
-			}
-			
-			var tmp=create_media_from(mapping_selected.pesci);
-			if ((typeof tmp != "undefined")&&(tmp.length!= 0)) {
-				var str = create_carousel_with(tmp,"carousel_pesci");
-				$("#media_pesci")
-					.replaceWith(
-							'<div id="media_pesci"><div class="panel panel-transparent"><div class="panel-heading"><h4>Pesci censiti</h4></div><div class="panel-body" '+padding_str+' id="img_pesci">'
-							+ str + '</div></div></div>');
-			}
-			
-			if ((typeof m != "undefined")&&(m.length!=00)) {
-				var str = create_carousel_with(m,"carousel_img");				
-				$("#media_img")
-						.replaceWith(
-								'<div id="media_img"><div class="panel panel-transparent"><div class="panel-heading"><h4>Immagini raccolte</h4></div><div class="panel-body" '+padding_str+' id="img_body">'
-										+ str + '</div></div></div>');				
-			}
-		
-			if ((typeof m != "undefined")&&(m.length!=00)) {
-				var str = create_lightbox_with(m);
-				$("#media_video")
-						.replaceWith(
-								'<div id="media_video"><div class="panel panel-transparent"><div class="panel-heading"><h4>Video raccolti</h4></div><div class="panel-body" '+padding_str+' id="video_body">'
-										+ str + '</div></div></div>');				
-			}
-
-			for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
-				if (m[i].type != 'video')
-					continue;
-				/*
-				 * Get iframe src attribute value i.e. YouTube video url and
-				 * store it in a variable
-				 */
-
-				var s = "#video_modal_" + i
-				$(s).ready(function() {
-					var url = $("#id_video_" + i).attr('src');
-					console.log("url=" + url);
-					/*
-					 * Assign empty url value to the iframe src attribute when
-					 * modal hide, which stop the video playing
-					 */
-					console.log("Trovato?: " + i);
-					console.log($("#video_modal_" + i));
-
-					$(s).on('hidden.bs.modal', function(e) {
-						console.log("Hello closing #id_video_" + i);
-						$("#id_video_" + i).attr('src', '');
-					});
-
-					/*
-					 * Assign the initially stored url back to the iframe src
-					 * attribute when modal is displayed again
-					 */
-					$("#video_modal_" + i).on('shown.bs.modal', function(e) {
-						console.log("show url=" + url);
-						$("#id_video_" + i).attr('src', url);
-					});
-				});
-
-			}
-
-		},
+	    zValueLabel : function(value) {
+		return -value;
+	    } ,
+	    interaction: {
+		navigationButtons: true
+	    },
+	    tooltip: function (point) { return '<strong>Stazione:</strong><b>' +
+					    point.data.id + '</b><br>';
+					  },
+	            // Tooltip default styling can be overridden
+        tooltipStyle: {
+          content: {
+            background    : 'rgba(255, 255, 255, 0.7)',
+            padding       : '10px',
+            borderRadius  : '10px'
+          },
+          line: {
+            borderLeft    : '1px dotted rgba(0, 0, 0, 0.5)'
+          },
+          dot: {
+            border        : '5px solid rgba(0, 0, 0, 0.5)'
+          }
+        },
+	    onclick : handle_click_on_station,
 		keepAspectRatio : true,
 		verticalRatio : 0.5
 	};
