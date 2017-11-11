@@ -3,16 +3,18 @@ function handle_click_on_station(point) {
 	.replaceWith(
 	    '<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
     
-    var id = point.id;
+    var id = parseInt(point.id);
     var m = null;
     var mapping_selected;
-    for (var j = 0; j < mapping.length; j++) {
-	if (mapping[j].id == id) {
+    
+    //    for (var j = 0; j < mapping.length; j++) {
+    j=mapping.length-id;
+	if (parseInt(mapping[j].id) == id) {
 	    m = mapping[j].media;
 	    mapping_selected=mapping[j];
-	    break;
+//	    break;
 	}
-    }
+    
     if (m == null) {
 	console.log("Non abbiamo trovato " + id);
     }
@@ -395,19 +397,27 @@ function drawVisualization() {
 	function capitalize(str){
 		return str.substr(0,1).toUpperCase()+str.substr(1).toLowerCase();
 	}
-	
-    function human_readable(nh) {
-	if (nh=="temperatura") return capitalize(nh.replace("_"," "))+" C";
-	if (nh=="visibilita") return capitalize(nh.replace("_"," "))+" m";
-	return capitalize(nh.replace("_"," "))+" m/minuto";
+
+    function phys_dim_of(nh) {
+	if (nh=="temperatura") return "C";
+	if (nh=="visibilita") return "m";
+	return 'm/minuto';
+    }
+    function human_readable(nh,with_dim) {
+	if (with_dim) {
+	    return capitalize(nh.replace("_"," "))+phys_dim_of(nh);
+	} else {
+	    return capitalize(nh.replace("_"," "));
 	}
+
+    }
 	// specify options
 	var options = {
 		width : '600px',
 		height : '600px',
 		style : 'dot-color',
 		showLegend : true,
-		legendLabel : human_readable($("#parametro_da_graficare").val()),
+	    legendLabel : human_readable($("#parametro_da_graficare").val(),true),
 		showPerspective : true,
 		showGrid : true,
 		showShadow : true,
@@ -424,13 +434,15 @@ function drawVisualization() {
 	    zValueLabel : function(value) {
 		return -value;
 	    } ,
-	    interaction: {
-		navigationButtons: true
+	    tooltip: function (point) {
+		var str= '<strong>Stazione:</strong><b>' +point.data.id + '</b><br>';
+		var tipo_var=$("#parametro_da_graficare").val();
+		idx=mapping.length-parseInt(point.data.id);
+
+		str+='<strong>'+human_readable(tipo_var,false)+':</strong> '+mapping[idx][tipo_var]+' '+phys_dim_of(tipo_var)+'<br>';
+		return str;
 	    },
-	    tooltip: function (point) { return '<strong>Stazione:</strong><b>' +
-					    point.data.id + '</b><br>';
-					  },
-	            // Tooltip default styling can be overridden
+	    // Tooltip default styling can be overridden
         tooltipStyle: {
           content: {
             background    : 'rgba(255, 255, 255, 0.7)',
@@ -438,10 +450,10 @@ function drawVisualization() {
             borderRadius  : '10px'
           },
           line: {
-            borderLeft    : '1px dotted rgba(0, 0, 0, 0.5)'
+            borderLeft    : '0px'// dotted rgba(0, 0, 0, 0.5)'
           },
           dot: {
-            border        : '5px solid rgba(0, 0, 0, 0.5)'
+            border        : '0px'// solid rgba(0, 0, 0, 0.5)'
           }
         },
 	    onclick : handle_click_on_station,
