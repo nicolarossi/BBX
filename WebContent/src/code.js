@@ -405,7 +405,7 @@ function drawVisualization() {
     }
     function human_readable(nh,with_dim) {
 	if (with_dim) {
-	    return capitalize(nh.replace("_"," "))+phys_dim_of(nh);
+	    return capitalize(nh.replace("_"," "))+' '+phys_dim_of(nh);
 	} else {
 	    return capitalize(nh.replace("_"," "));
 	}
