@@ -44,6 +44,9 @@ and open the template in the editor.
 
 <script src="src/slider.js"></script>
 
+<script src="src/mapping_associati.js"></script>
+<script src="src/associati.js"></script>
+
 <link rel="stylesheet" href="css/theme.css">
 <style>
 body {
@@ -58,9 +61,10 @@ body {
 }
 </style>
 <script>
-	$(document).ready(function() {
-		//carousel();
-	});
+  $(document).ready(function() {
+  load_associati();
+  //carousel();
+  });
 </script>
 </head>
 <body>
@@ -122,49 +126,9 @@ body {
 	</nav>
 	<div class="container-fluid">
 	  <!-- -->
-	  		<div class="row">		
-			<div class="col-sm-6" >
-				<div class="panel panel-transparent">
-					<div class="panel-heading">
-						<h2>Gonzalo: Fundamental</h2>
-					</div>
-					<div class="panel panel-body">
-						<img class="img img-responsive img-rounded"
-							src="images/associati/gonzalo.jpg">
-					</div>
-				</div>
-			</div>
-		
-			<div class="col-sm-6" id="antonio">
-				<div class="panel panel-transparent">
-					<div class="panel-heading">
-						<h2>Rodio: Tech 1</h2>
-					</div>
-					<div class="panel panel-body">
-						<img class="img img-responsive img-rounded"
-							src="images/associati/rodio.jpg">
-					</div>
-				</div>
-			</div>		
-		</div>
+	  <div id="associati">
+	  </div>
 	  <!-- -->
-	  		<div class="row">		
-			<div class="col-sm-6" >
-				<div class="panel panel-transparent">
-					<div class="panel-heading">
-						<h2>Nicola: Rec 3</h2>
-					</div>
-					<div class="panel panel-body">
-						<img class="img img-responsive img-rounded"
-							src="images/associati/nicola.jpg">
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
 	</div>
 
 
