@@ -37,6 +37,8 @@
 
     <!-- Map code -->
     <!-- TODO clean -->
+    <script src="src/dive_site.js" type="text/javascript">
+    </script>
     <script src="src/map.js" type="text/javascript">
     </script>
 
@@ -119,8 +121,11 @@
 
     <script>
       $(document).ready(function(){
+      console.log("start");
       create_map();
+      console.log("created map");
       aggiungi_visualizzazione_popup(selected_site);
+      console.log("added popup");
       
       });
     </script>
