@@ -29,4 +29,9 @@ var associati=[
 	image : "images/associati/nicola.jpg",
 	female : "false"
       }
+    , { name : "Mario C." ,
+	level : "Rec 3",
+	image : "images/associati/mario_cacciuni.jpg",
+	female : "false"
+      }
 ];
