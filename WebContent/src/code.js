@@ -4,19 +4,22 @@ function handle_click_on_station(point) {
 	    '<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
     
     var id = parseInt(point.id);
+    console.log("Clicked on "+id);
     var m = null;
     var mapping_selected;
     
     //    for (var j = 0; j < mapping.length; j++) {
-    j=mapping.length-id;
-	if (parseInt(mapping[j].id) == id) {
-	    m = mapping[j].media;
-	    mapping_selected=mapping[j];
-//	    break;
-	}
+    j=mapping.length-id-1;
+    if (parseInt(mapping[j].id) == id) {
+	m = mapping[j].media;
+	mapping_selected=mapping[j];
+	//	    break;
+    } else {
+	console.log("Non abbiamo trovato di " + id);	
+    }
     
     if (m == null) {
-	console.log("Non abbiamo trovato " + id);
+	console.log("Non abbiamo trovato .media di " + id);
     }
     
     var divers="";
@@ -53,21 +56,28 @@ function handle_click_on_station(point) {
 		    + str + '</div></div></div>');
     }
     
-    if ((typeof m != "undefined")&&(m.length!=00)) {
-	var str = create_carousel_with(m,"carousel_img");				
-	$("#media_img")
-	    .replaceWith(
-		'<div id="media_img"><div class="panel panel-transparent"><div class="panel-heading"><h4>Immagini raccolte</h4></div><div class="panel-body" '+padding_str+' id="img_body">'
-		    + str + '</div></div></div>');				
+//    if ((typeof m != "undefined")&&(m.length!=00)) {
+    var str="";
+    if ((typeof m != "undefined")) {
+	if (m.length>0) {
+	    str = create_carousel_with(m,"carousel_img");				
+	}
     }
+    $("#media_img")
+	.replaceWith(
+	    '<div id="media_img"><div class="panel panel-transparent"><div class="panel-heading"><h4>Immagini raccolte</h4></div><div class="panel-body" '+padding_str+' id="img_body">'
+		+ str + '</div></div></div>');				
+//    }
+
+    str=""
+    if ((typeof m != "undefined")&&(m.length!=00)) {
+	str = create_lightbox_with(m);
+    }
+    $("#media_video")
+	.replaceWith(
+	    '<div id="media_video"><div class="panel panel-transparent"><div class="panel-heading"><h4>Video raccolti</h4></div><div class="panel-body" '+padding_str+' id="video_body">'
+		+ str + '</div></div></div>');				
     
-    if ((typeof m != "undefined")&&(m.length!=00)) {
-	var str = create_lightbox_with(m);
-	$("#media_video")
-	    .replaceWith(
-		'<div id="media_video"><div class="panel panel-transparent"><div class="panel-heading"><h4>Video raccolti</h4></div><div class="panel-body" '+padding_str+' id="video_body">'
-		    + str + '</div></div></div>');				
-    }
     
     for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 	if (m[i].type != 'video')
@@ -215,7 +225,7 @@ function create_carousel_with(m,id_carousel) {
 	for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 		if (m[i].type != "img")
 			continue;
-		console.log(i + "URL:" + m[i].url);
+//		console.log(i + "URL:" + m[i].url);
 		var active = "";
 		if (k == 0) {
 			active = 'class="active"';
