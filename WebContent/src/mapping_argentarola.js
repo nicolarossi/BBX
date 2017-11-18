@@ -137,7 +137,7 @@ var mapping = [ {
 	dist : 10,
 	divers: [ "Eli" , "Eugenia"] ,
 	temperatura : 14,
-	intensita_corrente: 3,
+	intensita_corrente: 0,
 	visibilita : 6,
 	fondale : "roccia",
 	benthos : { "alghe verdi" : 1 , "alghe rosse" : 1 , "spugne":1 , "clandocola" : 1 , "ricci" :1 , "stelle" : 1},
