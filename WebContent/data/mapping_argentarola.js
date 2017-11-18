@@ -159,7 +159,7 @@ var mapping = [ {
     divers: [ "BBX" ],
     temperatura : 15,
     intensita_corrente : 0,
-    visibilita:30,
+    visibilita:6,
     dist : 8,
     Nord : "42° 25.110' ",
     Est : "11° 4.839' "
