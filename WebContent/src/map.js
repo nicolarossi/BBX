@@ -117,6 +117,7 @@ function create_map(){
 	view: view,
 	controls: ol.control.defaults().extend([
 	    new ol.control.ScaleLine(),
+	    new ol.control.OverviewMap(),	    
 	    new ol.control.ZoomSlider()
 	])
     });
@@ -178,6 +179,7 @@ function aggiungi_visualizzazione_popup(handling_click_id){
     map.on('click', function(evt) {
 	var feature = map.forEachFeatureAtPixel(evt.pixel,
 						function(feature, layer) {
+						    console.log("Clicked feature ");
 						    return feature;
 						});
 	    
@@ -191,20 +193,29 @@ function aggiungi_visualizzazione_popup(handling_click_id){
 	    
 	    if (typeof feature.get('text') !== "undefined") {
 		text_to_print=feature.get('text');
+		console.log("FIND feature.text="+text_to_print);
 	    } else if (typeof feature.get('description') !== "undefined") {
 		text_to_print=feature.get('description');
+		console.log("FIND feature.description="+text_to_print);
+	    } else {
+		console.log(" un terzo caso accade ");
 	    }
 	    
 	    if (typeof feature.get('id') !== "id") {
 		var id=feature.get('id');
-		if (id > 0) {
-		    handling_click_id(id);
-		}
+		handling_click_id(id);
+		console.log(" DEBUG  selezionata la feature con id:["+id+"]");
+	    } else {
+		console.log(" ERRORE la feature selezionata non ha il valore id");
 	    }
 
-	    el.html("<p>"+text_to_print + "<br>"+ol.coordinate.toStringHDMS(ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326'))+"</p>");
+
+	    var coordinate=ol.coordinate.toStringHDMS(ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326'));
+	    el.html(""+text_to_print + "<br>"+coordinate+"");
 	    $("#myModal").modal();
-	    
+
+	    $("#popupinfo").css('display','');
+	     
 //	    $("#myModal").toggleClass("hide");
 	    
 	    //--- selezioniamo il sito
