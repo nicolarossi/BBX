@@ -437,7 +437,7 @@ function drawVisualization() {
 	    tooltip: function (point) {
 		var str= '<strong>Stazione:</strong><b>' +point.data.id + '</b><br>';
 		var tipo_var=$("#parametro_da_graficare").val();
-		idx=mapping.length-parseInt(point.data.id);
+		idx=mapping.length-parseInt(point.data.id)+1;
 
 		str+='<strong>'+human_readable(tipo_var,false)+':</strong> '+mapping[idx][tipo_var]+' '+phys_dim_of(tipo_var)+'<br>';
 		return str;
