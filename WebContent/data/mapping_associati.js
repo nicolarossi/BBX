@@ -34,4 +34,9 @@ var associati=[
 	image : "images/associati/mario_cacciuni.jpg",
 	female : "false"
       }
+    , { name : "Cristiano S." ,
+	level : "Tech 2",
+	image : "images/associati/cristiano_s.jpg",
+	female : "false"
+      }
 ];
