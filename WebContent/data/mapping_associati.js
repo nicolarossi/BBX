@@ -39,4 +39,9 @@ var associati=[
 	image : "images/associati/cristiano_s.jpg",
 	female : "false"
       }
+    , { name : "Flavia A." ,
+	level : "Fundamental",
+	image : "images/associati/flavia.jpg",
+	female : "false"
+      }
 ];
