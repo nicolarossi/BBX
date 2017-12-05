@@ -1,4 +1,4 @@
-cd var associati=[
+associati=[
     { name : "Giuseppe R." ,
       level : "Tech 2",
       image : "images/associati/rodio.jpg",
