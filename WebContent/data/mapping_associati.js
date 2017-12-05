@@ -1,4 +1,4 @@
-var associati=[
+cd var associati=[
     { name : "Giuseppe R." ,
       level : "Tech 2",
       image : "images/associati/rodio.jpg",
@@ -22,6 +22,11 @@ var associati=[
     , { name : "Marco A.G." ,
 	level : "Fundamental",
 	image : "images/associati/gonzalo.jpg",
+	female : "false"
+      }
+    , { name : "Francesca M." ,
+	level : "Tech 1",
+	image : "images/associati/Marini.jpg",
 	female : "false"
       }
     , { name : "Nicola R." ,
