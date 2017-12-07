@@ -13,7 +13,7 @@ function load_associati() {
 	header.html("<strong><h2>"+socio.name+"</h2></strong>");
 
 	var body=$("<div class='panel-body'></div>");
-	body.html("<img class='img img-responsive img-rounded' src='"+socio.image+"'><br><ul><li><strong>"+socio.level+"</strong></li></ul>");
+	body.html("<img class='img img-responsive img-rounded' src='"+socio.image+"'><br><ul><li><strong>"+socio.level+" diver</strong></li></ul>");
 
 //	var footer=$("<div class='panel-footer'></div>");
 //	footer.html("<ul><li><strong>"+socio.level+"</strong></li></ul>");
