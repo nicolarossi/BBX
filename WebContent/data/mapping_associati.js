@@ -39,14 +39,20 @@ associati=[
 	image : "images/associati/mario_cacciuni.jpg",
 	female : "false"
       }
-    , { name : "Cristiano S." ,
-	level : "Tech 2",
-	image : "images/associati/cristiano_s.jpg",
-	female : "false"
-      }
     , { name : "Flavia A." ,
 	level : "Fundamental",
 	image : "images/associati/flavia.jpg",
 	female : "false"
       }
+    , { name : "Cristiano S." ,
+	level : "Tech 2",
+	image : "images/associati/cristiano_s.jpg",
+	female : "false"
+      }
+    , { name : "Emiliano R." ,
+	level : "Istruttore GUE<br>Tech 2",
+	image : "images/associati/flavia.jpg",
+	female : "false"
+      }
+
 ];
