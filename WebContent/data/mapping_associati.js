@@ -50,8 +50,8 @@ associati=[
 	female : "false"
       }
     , { name : "Emiliano R." ,
-	level : "Istruttore GUE<br>Tech 2",
-	image : "images/associati/flavia.jpg",
+	level : "Istruttore GUE</li><li>Tech 2",
+	image : "images/associati/emiliano.jpg",
 	female : "false"
       }
 
