@@ -1,7 +1,7 @@
 
 function load_associati() {
     associati.sort(function (a,b){
-	return a.name < b.name ;
+	return a.name > b.name ;
     });
     
     for (var i=0;i<associati.length;i++) {
