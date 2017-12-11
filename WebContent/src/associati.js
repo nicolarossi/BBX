@@ -1,7 +1,13 @@
 
 function load_associati() {
-    associati.sort(function (a,b){
-	return a.name > b.name ;
+    associati.sort(function (a,b) {
+	if (a.female == b.female) {
+	    return a.name > b.name ;
+	} else {
+	    return ( a.female == "false" );
+	}
+
+	
     });
     
     for (var i=0;i<associati.length;i++) {

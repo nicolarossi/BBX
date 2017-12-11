@@ -7,7 +7,7 @@ associati=[
     , { name : "Silvia M." ,
 	level : "Fundamentals",
 	image : "images/associati/Silvia_Mastrocesare.jpg",
-	female : "false"
+	female : "true"
       }
     , { name : "Maurizio C." ,
 	level : "Fundamentals",
@@ -17,7 +17,7 @@ associati=[
     , { name : "Eugenia P." ,
 	level : "Fundamentals",
 	image : "images/associati/eugenia.jpg",
-	female : "false"
+	female : "true"
       }
     , { name : "Marco A.G." ,
 	level : "Fundamentals",
@@ -27,7 +27,7 @@ associati=[
     , { name : "Francesca M." ,
 	level : "Tech 1",
 	image : "images/associati/Marini.jpg",
-	female : "false"
+	female : "true"
       }
     , { name : "Nicola R." ,
 	level : "Rec 3",
@@ -42,7 +42,7 @@ associati=[
     , { name : "Flavia A." ,
 	level : "Fundamentals",
 	image : "images/associati/flavia.jpg",
-	female : "false"
+	female : "true"
       }
     , { name : "Cristiano S." ,
 	level : "Tech 2 diver</li><li>Cave 1",
