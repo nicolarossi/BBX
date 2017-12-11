@@ -61,7 +61,7 @@ associati=[
       }
     , { name : "Alfredo C." ,
 	level : "Rec 3",
-	image : "images/associati/barbieri_sr.jpg",
+	image : "images/associati/alfredo.jpg",
 	female : "false"
       }
 
