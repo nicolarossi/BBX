@@ -54,5 +54,15 @@ associati=[
 	image : "images/associati/emiliano.jpg",
 	female : "false"
       }
+    , { name : "Giuseppe B." ,
+	level : "Rec 3",
+	image : "images/associati/barbieri_sr.jpg",
+	female : "false"
+      }
+    , { name : "Alfredo C." ,
+	level : "Rec 3",
+	image : "images/associati/barbieri_sr.jpg",
+	female : "false"
+      }
 
 ];
