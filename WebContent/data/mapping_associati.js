@@ -1,26 +1,26 @@
 associati=[
     { name : "Giuseppe R." ,
-      level : "Tech 2",
+      level : "Tech 1",
       image : "images/associati/rodio.jpg",
       female : "false"
     }
     , { name : "Silvia M." ,
-	level : "Fundamental",
+	level : "Fundamentals",
 	image : "images/associati/Silvia_Mastrocesare.jpg",
 	female : "false"
       }
     , { name : "Maurizio C." ,
-	level : "Fundamental",
+	level : "Fundamentals",
 	image : "images/associati/Maurizio.jpg",
 	female : "false"
       }
     , { name : "Eugenia P." ,
-	level : "Fundamental",
+	level : "Fundamentals",
 	image : "images/associati/eugenia.jpg",
 	female : "false"
       }
     , { name : "Marco A.G." ,
-	level : "Fundamental",
+	level : "Fundamentals",
 	image : "images/associati/gonzalo.jpg",
 	female : "false"
       }
@@ -40,12 +40,12 @@ associati=[
 	female : "false"
       }
     , { name : "Flavia A." ,
-	level : "Fundamental",
+	level : "Fundamentals",
 	image : "images/associati/flavia.jpg",
 	female : "false"
       }
     , { name : "Cristiano S." ,
-	level : "Tech 2",
+	level : "Tech 2 diver</li><li>Cave 1",
 	image : "images/associati/cristiano_s.jpg",
 	female : "false"
       }
