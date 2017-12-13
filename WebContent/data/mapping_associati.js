@@ -10,7 +10,7 @@ associati=[
 	female : "true"
       }
     , { name : "Maurizio C." ,
-	level : "Fundamentals",
+	level : "Rec 3",
 	image : "images/associati/Maurizio.jpg",
 	female : "false"
       }
