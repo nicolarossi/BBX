@@ -65,12 +65,12 @@ associati=[
 	female : "false"
       }
     , { name : "Massimiliano S." ,
-	level : "Tech 2 Diver",
+	level : "Tech 2",
 	image : "images/associati/sabatini.jpg",
 	female : "false"
       }
     , { name : "Massimo P." ,
-	level : "Tech 1 Diver",
+	level : "Tech 1",
 	image : "images/associati/massimo_p.jpg",
 	female : "false"
       }
