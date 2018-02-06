@@ -79,4 +79,4 @@ associati=[
 	image : "images/associati/mattia_b.jpg",
 	female : "false"
       }
-
+];
