@@ -244,9 +244,13 @@ function create_carousel_with(m,id_carousel) {
 		if (k == 0) {
 			active = 'active';
 		}
+	    var copyright=def_copyright
+	    if ('copyright' in m[i]) {
+		copyright=m[i].copyright;
+	    }
 		str += '<div class="item ' + active + '"><img src="' + m[i].url
 				+ '" style="width:100%" alt="' + m[i].description + '">'+
-				'<div class="carousel-caption"><h3>' + m[i].description + '</h3></div></div>';
+				'<div class="carousel-caption"><h3>' + m[i].description + '</h3><h5>'+copyright+'</h5></div></div>';
 		k++;
 	}
 	str += '</div>';

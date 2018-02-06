@@ -1,3 +1,5 @@
+var def_copyright = "";//Copyleft
+
 var mapping = [ {
     id : 10,
     depth : 50,
