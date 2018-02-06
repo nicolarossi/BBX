@@ -80,7 +80,3 @@ associati=[
 	female : "false"
       }
 
-    
-
-Tech 1 Diver
-];
