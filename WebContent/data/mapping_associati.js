@@ -74,5 +74,13 @@ associati=[
 	image : "images/associati/massimo_p.jpg",
 	female : "false"
       }
+    , { name : "Mattia B." ,
+	level : "Tech 1",
+	image : "images/associati/mattia_b.jpg",
+	female : "false"
+      }
 
+    
+
+Tech 1 Diver
 ];
