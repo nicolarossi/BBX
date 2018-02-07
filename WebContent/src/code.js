@@ -116,7 +116,7 @@ function handle_click_on_station(point) {
     }
     
 }
-function print_transetti() {
+function print_transetti_old() {
  var str=''	;
     str+='<div class="panel-heading" id="info_panel_heading">';
     str+='<h4>Transetti</h4>';
@@ -204,6 +204,105 @@ function print_transetti() {
     str+='<td> &rarr;</td>';
     str+='<td>Stazione 10</td>';
     str+='<td>110&deg;</td>';
+    str+='<td>21m</td>';
+    str+='</tr>';
+    str+='</tbody>';
+    str+='</table>';
+    str+='</div>';
+    str+='</div>';
+    str+='</div>';
+    
+    $("#tabella_transetti").replaceWith(str);
+}
+
+function print_transetti() {
+ var str=''	;
+    str+='<div class="panel-heading" id="info_panel_heading">';
+    str+='<h4>Transetti</h4>';
+    str+='</div>';
+    str+='<div class="panel panel-body" id="info_panel_body">';
+    str+='<div id="media">';
+    str+='<div class="well well-sm">';
+    str+='<div class="table-responsive">';
+    str+='<table class="table">';
+    str+='<thead>';
+    str+='<tr>';
+    str+='<th>Partenza </th>';
+    str+='<th>  </th>';
+    str+='<th>Arrivo </th>';
+    str+='<th>Direzione bussola</th>';
+    str+='<th>Distanza</th>';
+    str+='</tr>';
+    str+='</thead>';
+    str+='<tbody>';
+    str+='<tr>';
+    str+='<td> N 42&deg; 25.110\', E 11&deg; 4.839\' </td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 1</td>';
+    str+='<td>340&deg;</td>';
+    str+='<td>8m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 1</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 2</td>';
+    str+='<td>300&deg;</td>';
+    str+='<td>10m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 2</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 3</td>';
+    str+='<td>310&deg;</td>';
+    str+='<td>18m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 3</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 4</td>';
+    str+='<td>310&deg;</td>';
+    str+='<td>10m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 4</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 5</td>';
+    str+='<td>330&deg;</td>';
+    str+='<td>9m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 5</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 6</td>';
+    str+='<td>330&deg;</td>';
+    str+='<td>8m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 6</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 7</td>';
+    str+='<td>330&deg;</td>';
+    str+='<td>10m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 7</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 8</td>';
+    str+='<td>330&deg;</td>';
+    str+='<td>7m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 8</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 9</td>';
+    str+='<td>300&deg;</td>';
+    str+='<td>15m</td>';
+    str+='</tr>';
+    str+='<tr>';
+    str+='<td>Stazione 9</td>';
+    str+='<td> &rarr;</td>';
+    str+='<td>Stazione 10</td>';
+    str+='<td>290&deg;</td>';
     str+='<td>21m</td>';
     str+='</tr>';
     str+='</tbody>';
