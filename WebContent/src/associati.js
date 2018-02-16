@@ -23,7 +23,22 @@ function load_associati() {
 	header.html("<strong><h2>"+socio.name+"</h2></strong>");
 
 	var body=$("<div class='panel-body'></div>");
-	body.html("<img class='img img-responsive img-rounded' src='"+socio.image+"'><br><strong><ul><li>"+socio.level+" Diver</li></ul></strong>");
+
+	var html="<img class='img img-responsive img-rounded' src='"+socio.image+"'><br><strong><ul>"
+
+	html+="<li>"+socio.level+" Diver</li>";
+	
+	if (( 'cave' in socio ) && ( socio.cave != "")) {
+	    html+="<li><strong>"+socio.cave+" Diver</strong></li>";
+	}
+	if (( 'dpv' in socio ) && ( socio.dpv != "")) {
+	    html+="<li><strong>"+socio.dpv+" Diver</strong></li>";
+	}
+
+	html+="</ul></strong>";
+	
+	
+	body.html(html);
 
 //	var footer=$("<div class='panel-footer'></div>");
 //	footer.html("<ul><li><strong>"+socio.level+"</strong></li></ul>");
