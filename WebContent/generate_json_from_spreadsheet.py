@@ -52,7 +52,7 @@ def main(argv):
 
     features= []
     dive_site = {}
-    dive_site['type'] = 'FeaturesCollection'
+    dive_site['type'] = 'FeatureCollection'
 #
     #- Download the file
     urllib.urlretrieve (URL, path_excel)
