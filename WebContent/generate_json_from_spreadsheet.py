@@ -9,7 +9,7 @@ def print_json(data):
 def import_stations(sheet,features):
     print 'Import stations name:'
 
-    for i in range(1,50):
+    for i in range(2,50):
         cell_key='A'+str(i)
         if ( sheet[cell_key].value  is None ):
             continue
@@ -26,8 +26,8 @@ def import_stations(sheet,features):
         geometry={}
         geometry['type']='Point'
         coordinates=[]
-        coordinates.append(sheet['G'+str(i)].value)
         coordinates.append(sheet['H'+str(i)].value)
+        coordinates.append(sheet['G'+str(i)].value)
         geometry['coordinates']=coordinates
         
         feature['properties']=properties
