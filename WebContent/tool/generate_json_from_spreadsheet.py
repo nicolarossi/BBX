@@ -21,6 +21,7 @@ def import_stations(sheet,features):
         properties={}
         properties['id']=sheet[cell_key].value
         properties['description']=sheet['B'+str(i)].value
+        properties['site_title']=sheet['A'+str(i)].value
         properties['how_many_dives']='1'
 
         geometry={}

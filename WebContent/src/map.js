@@ -187,15 +187,17 @@ function aggiungi_visualizzazione_popup(handling_click_id){
 	var el=$("#popupinfo");
 	if (feature) {
 	    var coordinate = feature.getGeometry().getCoordinates();
-	    //el.show();
 	    
 	    var text_to_print;
+	    var site_title;
 	    
 	    if (typeof feature.get('text') !== "undefined") {
 		text_to_print=feature.get('text');
 		console.log("FIND feature.text="+text_to_print);
 	    } else if (typeof feature.get('description') !== "undefined") {
 		text_to_print=feature.get('description');
+		site_title=feature.get('site_title')
+		
 		console.log("FIND feature.description="+text_to_print);
 	    } else {
 		console.log(" un terzo caso accade ");
@@ -209,6 +211,7 @@ function aggiungi_visualizzazione_popup(handling_click_id){
 		console.log(" ERRORE la feature selezionata non ha il valore id");
 	    }
 
+	    $("#site_tile").html(title)
 
 	    var coordinate=ol.coordinate.toStringHDMS(ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326'));
 	    el.html(""+text_to_print + "<br>"+coordinate+"");
