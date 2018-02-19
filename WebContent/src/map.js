@@ -211,7 +211,7 @@ function aggiungi_visualizzazione_popup(handling_click_id){
 		console.log(" ERRORE la feature selezionata non ha il valore id");
 	    }
 
-	    $("#site_tile").html(title)
+	    $("#site_tile").html(site_title)
 
 	    var coordinate=ol.coordinate.toStringHDMS(ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326'));
 	    el.html(""+text_to_print + "<br>"+coordinate+"");
