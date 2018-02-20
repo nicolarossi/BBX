@@ -38,8 +38,8 @@ def import_site(sheet,features,maps):
         geometry={}
         geometry['type']='Point'
         coordinates=[]
+        coordinates.append(sheet['I'+str(i)].value)
         coordinates.append(sheet['H'+str(i)].value)
-        coordinates.append(sheet['G'+str(i)].value)
         geometry['coordinates']=coordinates
         
         feature['properties']=properties
