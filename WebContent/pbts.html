@@ -129,12 +129,16 @@
 
       console.log('call ajax');
       
-      $.ajax({url: "data/maps.json", success: function(result) {
+      $.ajax({url: "data/maps.json",
+      dataType:"json",
+      success: function(result) {
       console.log('loaded site_maps '+result);
       site_maps=JSON.parse(result);
       }});
 
-      $.ajax({url: "data/measurement.json", success: function(result) {
+      $.ajax({url: "data/measurement.json",
+      dataType:"json",
+      success: function(result) {
       measurement=JSON.parse(result);      
       console.log('loaded measurement');
       }});
