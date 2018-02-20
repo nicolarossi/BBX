@@ -132,8 +132,8 @@
       $.ajax({url: "data/maps.json",
       dataType:"json",
       success: function(result) {
-      console.log('loaded site_maps '+result);
-      site_maps=JSON.parse(result);
+      console.log('loaded site_maps '+JSON.stringify(result));
+//      site_maps=JSON.parse(result);
       }});
 
       $.ajax({url: "data/measurement.json",
