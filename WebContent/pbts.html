@@ -127,20 +127,17 @@
       var maps={};
       create_map();
 
-      console.log('call ajax');
-      
       $.ajax({url: "data/maps.json",
       dataType:"json",
       success: function(result) {
-      console.log('loaded site_maps '+JSON.stringify(result));
-//      site_maps=JSON.parse(result);
+      site_maps=result
       }});
 
       $.ajax({url: "data/measurement.json",
       dataType:"json",
       success: function(result) {
-      measurement=JSON.parse(result);      
-      console.log('loaded measurement');
+      measurement=result;
+      console.log('loaded measurement '+JSON.stringify(measurement));
       }});
 
       aggiungi_visualizzazione_popup(selected_site);
