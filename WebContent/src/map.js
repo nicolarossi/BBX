@@ -163,6 +163,7 @@ function select_site(id,description) {
     
 }
 
+// handling_click_id := selected_site
 function aggiungi_visualizzazione_popup(handling_click_id){
     $('.modal').on('shown.bs.modal', function() {
 	//Make sure the modal and backdrop are siblings (changes the DOM)
@@ -239,6 +240,13 @@ function selected_site(id){
     	return ;
     }
     console.log("into selected_id "+id);
+
+//    $("#select_stazione").remove()
+
+
+
+
+    
 }
 
 // TODO Rivedere 

@@ -124,11 +124,23 @@
 
     <script>
       $(document).ready(function(){
-      console.log('ready')
+      var maps={};
       create_map();
-      console.log('create_map')
+
+      console.log('call ajax');
+      
+      $.ajax({url: "data/maps.json", success: function(result) {
+      console.log('loaded site_maps '+result);
+      site_maps=JSON.parse(result);
+      }});
+
+      $.ajax({url: "data/measurement.json", success: function(result) {
+      measurement=JSON.parse(result);      
+      console.log('loaded measurement');
+      }});
+
       aggiungi_visualizzazione_popup(selected_site);
-      console.log('aggiungi_visualizzazione_popup')
+
       
       });
     </script>
@@ -545,7 +557,7 @@
             <div class="modal-body">
 	      <div id="popupinfo"><p>Some text in the modal.</p></div>
             </div>
-	    <div id="select_stazione">
+	    <div>
 	      <label for="select_stazione">Seleziona stazione da visualizzare:</label>
 	      <select class="form-control" id="select_stazione">
 		<option>Stazione 1</option>
