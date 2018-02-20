@@ -6,7 +6,7 @@ def print_json(data):
     with open('data/dive_site.json', 'w') as outfile:
         json.dump(data, outfile)
     
-def import_stations(sheet,features):
+def import_site(sheet,features):
     print 'Import stations name:'
 
     for i in range(2,50):
@@ -24,6 +24,7 @@ def import_stations(sheet,features):
         properties['site_title']=sheet['A'+str(i)].value
         properties['how_many_dives']='1'
 
+        
         geometry={}
         geometry['type']='Point'
         coordinates=[]
@@ -46,7 +47,9 @@ def main(argv):
     #------
     #--- Config parameter
     #-
-    URL="https://docs.google.com/spreadsheets/d/1Nj7GsQPx4UWiOHRN7FY9XpiCSBuTekw_7dBzVcpHP4I/export?format=xlsx"
+    URL="https://www.dropbox.com/s/g63lqeo0sjtrygi/Misurazioni%20Project%20Baseline%20Tyrrhenian%20Sea.xlsx?dl=0"
+        
+#    URL="https://docs.google.com/spreadsheets/d/1Nj7GsQPx4UWiOHRN7FY9XpiCSBuTekw_7dBzVcpHP4I/export?format=xlsx"
     path_excel='pippo.xlsx'
 
     stations_title='Stazioni'
@@ -65,8 +68,8 @@ def main(argv):
     #print wb.get_sheet_names()
     for sheet in wb:
         if stations_title == sheet.title:
-            import_stations(sheet,features)
-
+            import_site(sheet,features)
+   
     #
     dive_site['features'] = features
 
