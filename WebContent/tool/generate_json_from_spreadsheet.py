@@ -132,7 +132,7 @@ def main(argv):
     dive_site['type'] = 'FeatureCollection'
 #
     #- Download the file
-#    urllib.urlretrieve (URL, path_excel)
+    urllib.urlretrieve (URL, path_excel)
 
     
     # Manage the spreadsheet

@@ -241,9 +241,25 @@ function selected_site(id){
     }
     console.log("into selected_id "+id);
 
-//    $("#select_stazione").remove()
+    $("#select_stazione").remove()
 
+    var sel = $('<select class="form-control" id="select_stazione">').insertAfter('#label_select_stazione');
+//    str+='<select class="form-control" id="select_stazione">'
+    //    str+='<select>'
+    
+//    $("#label_select_stazione").append('<option>Stazione A</option>')
+ //   item.append('<option>Stazione B</option>')
 
+    var site=site_maps[id]
+    for(var k in site) {
+	var info=site[k]
+	//	sel.append($("<option>").attr('value',this.val).text(this.text));
+	sel.append($("<option>").attr('value',k).text(''+k+' - '+info.description));
+	console.log('aggiunto : '+k);
+    }
+    
+    
+    
 
 
     
