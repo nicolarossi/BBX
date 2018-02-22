@@ -224,7 +224,6 @@ function aggiungi_visualizzazione_popup(handling_click_id){
 	    
 	    //--- selezioniamo il sito
 //	    select_site(parseInt(feature.get('id')),feature.get('description'));
-	    
 	} else {
 	    el.hide();
 	}
@@ -233,6 +232,17 @@ function aggiungi_visualizzazione_popup(handling_click_id){
 }
 
 var extern_D={};
+
+function selected_station() {
+    id_stazione=$("#select_stazione").val()
+    console.log("selected station"+id_stazione)
+
+    for (var m in measurement[id_stazione]) {
+	$("#view_measurement").empty();
+	$("#view_measurement").append("<h3>Che ci mettiamo per la stazione ["+id_stazione+"]?</h3>")
+    }
+}
+
 
 function selected_site(id){
     if (id<=0) {
@@ -243,26 +253,29 @@ function selected_site(id){
 
     $("#select_stazione").remove()
 
-    var sel = $('<select class="form-control" id="select_stazione">').insertAfter('#label_select_stazione');
-//    str+='<select class="form-control" id="select_stazione">'
-    //    str+='<select>'
-    
-//    $("#label_select_stazione").append('<option>Stazione A</option>')
- //   item.append('<option>Stazione B</option>')
-
     var site=site_maps[id]
+
+    n_stations=0
+    
     for(var k in site) {
-	var info=site[k]
-	//	sel.append($("<option>").attr('value',this.val).text(this.text));
-	sel.append($("<option>").attr('value',k).text(''+k+' - '+info.description));
-	console.log('aggiunto : '+k);
+	n_stations++
     }
     
-    
-    
+    if (n_stations==0) {
+	return ;
+    }
 
+    var sel = $('<select class="form-control" id="select_stazione" onchange="selected_station()">').insertAfter('#label_select_stazione');
+    
+    for(var k in site) {
+	var info=site[k]
 
+	sel.append($("<option>").attr('value',k).text(''+k+' - '+info.description));
+	console.log('aggiunto : '+k);
+
+    }
     
 }
+
 
 // TODO Rivedere 
