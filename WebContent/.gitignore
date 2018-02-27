@@ -2,4 +2,6 @@
 ./appunti*
 *.sh
 pippo.xlsx
-authentication_data.py
+tool/authentication_data.*
+__pycache__/
+to_install/
