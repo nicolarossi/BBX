@@ -2,4 +2,4 @@
 ./appunti*
 *.sh
 pippo.xlsx
-password.py
+authentication_data.py
