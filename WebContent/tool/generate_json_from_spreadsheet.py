@@ -10,11 +10,11 @@ def import_site(sheet,features,maps):
     print 'Import stations name:'
 
     for i in range(2,100):
-        cell_key='A'+str(i)
+        cell_key='B'+str(i)
         if ( sheet[cell_key].value  is None ):
             continue
 
-        cell_key_up='A'+str(i-1)
+        cell_key_up='B'+str(i-1)
         site_up=sheet[cell_key_up].value
 
         new_site=True
@@ -30,8 +30,8 @@ def import_site(sheet,features,maps):
         
         properties={}
         properties['id']=sheet[cell_key].value
-        properties['description']=sheet['B'+str(i)].value
-        properties['site_title']=sheet['A'+str(i)].value
+        properties['description']=sheet['C'+str(i)].value
+        properties['site_title']=sheet['B'+str(i)].value
         properties['how_many_dives']='1'
 
         
@@ -54,14 +54,13 @@ def import_site(sheet,features,maps):
             stations=maps[site]
 
 
-        
-        station_id=sheet['C'+str(i)].value
+        station_id=sheet['A'+str(i)].value
         if (station_id is None ):
-            print('WARNING: Skip station for '+site+' because cell C'+str(i)+' is empty ')
+            print('WARNING: Skip station for '+site+' because cell A'+str(i)+' is empty ')
             continue
 
         if (station_id in stations):
-            print('ERROR: Skip station for '+site+' because cell C'+str(i)+' is not unique ')
+            print('ERROR: Skip station for '+site+' because cell A'+str(i)+' is not unique ')
             continue
         
         stations[station_id]={}
