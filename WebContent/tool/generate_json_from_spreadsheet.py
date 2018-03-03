@@ -154,17 +154,16 @@ def import_image_from_dropbox(dropbox_folder,image_folder,measure):
     print(' Import image from dropbox folder...')
     dropbox_path=dropbox_folder+measure['url']
 
-    dest_format='png'
+#    dest_format='png'
     
     tmp=image_folder+measure['url']
 
     dest_dir=os.path.dirname(tmp)
             
-    tmp_dest_file = os.path.basename(image_folder+measure['url'])
-    
-    (dest_file,tmp_ext)=os.path.splitext(tmp_dest_file)
-    
-    dest_path=dest_dir+'/'+dest_file+'.'+dest_format
+    dest_file = os.path.basename(image_folder+measure['url'])
+
+
+    dest_path=dest_dir+'/'+dest_file
 
     dropbox_path=dropbox_path.replace('//','/')
     dest_path=dest_path.replace('//','/')
@@ -183,7 +182,7 @@ def import_image_from_dropbox(dropbox_folder,image_folder,measure):
                 
     with Image(filename=dropbox_path) as original:
         with original.clone() as converted:
-            converted.format=dest_format
+#            converted.format=dest_format
             converted.transform(resize='400x')
             
             converted.save(filename=dest_path)

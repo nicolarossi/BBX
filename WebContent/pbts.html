@@ -44,6 +44,8 @@
     -->
     <script src="src/map.js" type="text/javascript">
     </script>
+    <script src="src/create_carousel_measurement.js" type="text/javascript">
+    </script>
 
     <!-- Openlayer -->
     <script src="https://openlayers.org/en/v4.0.1/build/ol-debug.js" type="text/javascript">
@@ -137,7 +139,6 @@
       dataType:"json",
       success: function(result) {
       measurement=result;
-      console.log('loaded measurement '+JSON.stringify(measurement));
       }});
 
       aggiungi_visualizzazione_popup(selected_site);
@@ -567,6 +568,7 @@
 		<option>Stazione 4</option>
 	      </select>
 	      <div style="color:black;" id="view_measurement">
+		
 	      </div>
 	    </div>
             <div class="modal-footer">

@@ -235,12 +235,17 @@ var extern_D={};
 
 function selected_station() {
     id_stazione=$("#select_stazione").val()
-    console.log("selected station"+id_stazione)
+    console.log("selected station "+id_stazione)
 
+    console.log("selected station "+id_stazione)
+
+    $("#view_measurement").empty();
+//    $("#view_measurement").append("<h3>Che ci mettiamo per la stazione ["+id_stazione+"]?</h3>")
+    /*
     for (var m in measurement[id_stazione]) {
-	$("#view_measurement").empty();
-	$("#view_measurement").append("<h3>Che ci mettiamo per la stazione ["+id_stazione+"]?</h3>")
-    }
+    }*/
+    $("#view_measurement").append(
+	create_carousel_measurement(measurement[id_stazione],'slide_stations'));
 }
 
 

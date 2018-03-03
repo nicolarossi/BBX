@@ -314,16 +314,13 @@ function print_transetti() {
     $("#tabella_transetti").replaceWith(str);
 }
 
-
 function create_carousel_with(m,id_carousel) {
-
-	
 	var str = '<div id="'+id_carousel+'" class="carousel slide" data-ride="carousel">';
 	str += '<ol class="carousel-indicators">'
 	var k = 0;
 	for (var i = 0; (typeof m != "undefined") && (i < m.length); i++) {
 		if (m[i].type != "img")
-			continue;
+		    continue;
 //		console.log(i + "URL:" + m[i].url);
 		var active = "";
 		if (k == 0) {
