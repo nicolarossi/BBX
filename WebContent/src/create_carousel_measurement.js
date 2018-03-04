@@ -20,10 +20,35 @@ function create_carousel_measurement(m,id_carousel) {
 	if (k == 0) {
 	    active = 'active';
 	}
+
 	description=''
+	description+='<table class="table">'
+	description+='<tbody>'
+	description+='<tr><td>Depth:</td><td>'+m[i]['Depth (m)']+' m</td></tr>'
+	description+='<tr><td>Temperature:</td><td>'+m[i]['Temperature (Celsius)']+' &degC</td></tr>'
+	description+='<tr><td>Visibility:</td><td>'+m[i]['Visibility (m)']+' m</td></tr>'
+	description+='<tr><td>Bottom Type:</td><td>'+m[i]['Bottom Type']+'</td></tr>'
+	description+='<tr><td>Benthos:</td><td>'+m[i]['Benthos (Species/Number)']+'</td></tr>'
+	description+='<tr><td>Anthropic Impact:</td><td>'+m[i]['Anthropic Impact']+'</td></tr>'
+	description+='<tr><td>Fish (Species/Number):</td><td>'+m[i]['Fish (Species/Number)']+'</td></tr>'
+	description+='<tr><td>Divers:</td><td>'+m[i]['Divers']+'</td></tr>'
+	description+='</tbody>'
+	description+='</table>'
+
+	
+	date_time=''+m[i]['Date']+' '+m[i]['Time']+'<br>'
+	description+='<br>'
 	str += '<div class="item ' + active + '"><img src="img/pbts/' + m[i].url
-	    + '" style="width:100%" alt="' + description + '">'+
-	    '<div class="carousel-caption"><h3>' + description + '</h3></div></div>';
+	    + '" style="width:100%" alt="image ' +(i) + '">'
+	    +'<div class="carousel-caption carousel-caption-below">'
+	    +'<div class="panel panel-transparent">'
+	    +'<div class="panel-heading"> Measurement date: '+date_time+'</div>'
+	    +'<div class="panel-body justified">'+description+'</div>'
+	    +'</div>'
+	    +'</div>'
+	    +'</div>'
+
+	;
 	k++;
     }
     str += '</div>';
