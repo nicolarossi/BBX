@@ -272,7 +272,7 @@ function selected_site(id){
 
     var sel = $('<select class="form-control" id="select_stazione" onchange="selected_station()">').insertAfter('#label_select_stazione');
     
-    for(var k in site) {
+    for (var k in site) {
 	var info=site[k]
 
 	sel.append($("<option>").attr('value',k).text(''+k+' - '+info.description));
