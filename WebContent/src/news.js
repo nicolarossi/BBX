@@ -6,7 +6,7 @@ function load_news( just_first ) {
 	return (a.id < b.id) ;
     });
 
-    console.log(" dentro load_news "+news_list.length);
+    console.log(" dentro load_news "+news_list.length+ ' ' +just_first);
    
     for (var i=0;i<news_list.length;i++) {
 
@@ -55,7 +55,7 @@ function load_news( just_first ) {
 	
 	/**/
 
-	if ( ! (   type_inserted.hasOwnProperty(news.type) )) {
+	if ( (! just_first) || ! ( type_inserted.hasOwnProperty(news.type) )) {
 	    $("#news_container").append(el);
 	    type_inserted[news.type]= true;
 	}
