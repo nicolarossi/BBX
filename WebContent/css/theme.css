@@ -195,6 +195,18 @@ a {
 	padding-bottom: 0px;
 }
 
+.panel-transparent .panel-footer {
+	background-color: rgba(0, 0, 20, 0.85) !important;
+	background-image: none;
+	background: none;
+	color: #ecf0f1;
+	text-shadow: 0px 0px 0px #fff;
+	padding-top: 20px;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 0px;
+}
+
 .bs-example {
 	margin: 20px;
 }

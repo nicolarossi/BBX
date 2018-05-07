@@ -43,6 +43,8 @@ and open the template in the editor.
 <script src="js/bootstrap.js"></script>
 
 <script src="src/slider.js"></script>
+<script src="src/news.js"></script>
+<script src="data/news.js"></script>
 
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/main.css">
@@ -119,6 +121,7 @@ opacity
 <script>
 	$(document).ready(function() {
 		carousel();
+		load_news(true);
 	});
 </script>
 </head>
@@ -335,8 +338,10 @@ Tra questi <b><i><a href="https://www.facebook.com/Project-Baseline-Tyrrhenian-S
 			</div>
 		</div>
 
-	</div>
+		<div id="news_container">
+		</div>
 
+	</div>
 
 </body>
 </html>
