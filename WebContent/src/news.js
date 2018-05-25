@@ -27,21 +27,29 @@ function load_news( just_first ) {
 	var icon=''
 	if ( 'icon' in news) {
 	    icon+='<span class="'+news.icon+'" aria-hidden="true"></span>'
+	} else {
+	    icon+='<span class="glyphicon glyphicon-'+news.type+'" aria-hidden="true"></span>'
 	}
 	header.html("<strong><h2>"+icon+' '+news.title+"</h2></strong>");
 
 	var body=$("<div class='panel-body'></div>");
 
 	var html=" "
-/*	if ('image' in news) {
-	    html+="<img class='img img-responsive img-rounded' src='"+news.image+"'><br><strong><ul>"
-	    }*/
+	var col_text=12
+	html+='<div class="row">'
+	if ('img' in news) {
+	    col_text=8
+	}
 
 	if ('body' in news) {
-	    html+=''+news.body
+	    html+='<div class="col-xs-'+col_text+'">'+news.body+'</div>'
 	}
+	if ('img' in news) {
+	    html+="<div class='col-xs-4'><img class='img img-responsive img-rounded' src='"+news.img+"'><br><strong><ul></div>"
+	    col_text=8
+	}
+	html+='</div>'
 	
-
 	body.html(html);
 
 	var footer=$("<div class='panel-footer'></div>");
