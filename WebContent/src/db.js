@@ -1,6 +1,7 @@
 var db=	{
     'alghe rosse' : {url : "media/alghe_rosse.jpg",description : "Breve descrizione" }
-    , 'alcyonum palmatum' : {url : "media/alcyonum_palmatum.jpg",description : "Breve descrizione" } 
+    , 'alcyonum palmatum' : {url : "media/alcyonum_palmatum.jpg",description : "Breve descrizione" }
+    
   ,'alghe verdi' : {url : "media/alghe_verdi.jpg",description : "Breve descrizione" } 
   ,'alghe' : {url : "media/alghe.jpg",description : "Breve descrizione" } 
   ,'anthias' : {url : "media/anthias.jpg",description : "Breve descrizione" } 
