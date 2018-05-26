@@ -457,7 +457,7 @@ function create_media_from(node){
 	for (var k in node) {
 //		console.log( " key = "+k);
 		if (typeof db[k] == "undefined") {
-			console.log("TOADD  '"+k+"' : {url : \"media/"+k+".jpg\",description : \"Breve descrizione\" }");
+			console.log("TOADD in src/db.js '"+k+"' : {url : \"media/"+k+".jpg\",description : \"Breve descrizione\" }");
 			continue;
 		}
 		desc_ = db[k].description;

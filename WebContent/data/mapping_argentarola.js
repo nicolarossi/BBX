@@ -5,14 +5,14 @@ var mapping = [ {
     depth : 50,
     bussola : 110,
     dist : 0,	
-    divers : [ "Cedurno" , "Daviano"],
+    divers : [ "Claudio" , "Damiano"],
     intensita_corrente: 0,
     direzione_corrente:234,
 
     temperatura : 12,
     fondale : "fango",
     visibilita : 2,
-    benthos  :  { "gorgonie" : 1 , "cavolini" : 1 , "isolane" : 1 } ,
+    benthos  :  { "gorgonie" : 1 , "eunicella cavolini" : 1 } ,
     impatto_umano : 0
 }, {
     id : 9,
@@ -27,7 +27,7 @@ var mapping = [ {
     visibilita : 2,	
     temperatura : 13,
     fondale : "fango",
-    benthos  :  { "malcion" : 1 , "palmatum": 1 , "gorgonie" : 1 ,"gavowni" : 1} ,
+    benthos  :  { "alcyonum palmatum": 1 , "gorgonie" : 1 ,"eunicella cavolini" : 1} ,
     impatto_umano : 0,
     colore : 1 /* fmGJqTd0Qt8 */
 }, {
@@ -43,8 +43,8 @@ var mapping = [ {
 
     temperatura : 14,
     fondale: "sabbia",
-    benthos : { "gorgonia" : 1 , "spugna" : 1 , "donzella" : 1 , "stelle marine" : 1 },
-    impatto_umano : "8 .... attorno ad una gorgonia",
+    benthos : { "gorgonia" : 1 , "spugna" : 1 , "donzella" : 1 , "stella marina" : 1 },
+    impatto_umano : "sciarpa attorno ad una gorgonia",
     pesci : { "anthias" : "banchi di 10"}
 },{
     id : 7 ,
@@ -57,8 +57,8 @@ var mapping = [ {
     direzione_corrente:234,
     visibilita : 5,
     fondale : "semi roccioso",
-    benthos : { "gorgonia rossa" : 1 , "astice" : 1 , "spugna" : 1 , "margherita" : 1 , "stelle marine" : 1 , "sertelle" : 1},
-    pesci : { "anthias" : 1 , "donzelle" : 1 , "castagnole" : 1},
+    benthos : { "gorgonia rossa" : 1 , "astice" : 1 , "spugna" : 1 , "margherite" : 1 , "stelle marine" : 1 , "sertella" : 1},
+    pesci : { "anthias" : 1 , "donzella" : 1 , "castagnole" : 1},
     
     media : [ {
 	type : "img",
@@ -105,8 +105,8 @@ var mapping = [ {
     intensita_corrente: 1,
     direzione_corrente : 235,
     temperatura : 14,
-    benthos : { "paraminacee" : 4 , "gorgonia gialla" : 5 , "ricci punta bianca" : 6 , "flabellina" : 2 , "stelle marine" : 3 },
-    pesci : { "saraghi": 7 , "triglie" : 3 , "cradinieri" : 2 , "gronco" : 1 , "anthias" : "> 30 "}
+    benthos : { "paramunicea" : 4 , "gorgonia gialla" : 5 , "ricci punta bianca" : 6 , "flabellina" : 2 , "stelle marine" : 3 },
+    pesci : { "saraghi": 7 , "triglie" : 3 , "carabinieri" : 2 , "grongo" : 1 , "anthias" : "> 30 "}
 }, {
     id : 3,
     depth : 15,
@@ -133,14 +133,12 @@ var mapping = [ {
     direzione_corrente : 235,
     visibilita : 6,
     fondale : "roccia",
-    benthos : { "eunicella":1 ,
-		"cavolini":1 ,
-		"sinsulanis":1 ,
+    benthos : { "eunicella cavolini":1 ,
 		"alghe":1 ,
 		"ricci":1 ,
 		"spugne":1 		
 	      },
-    pesci : { "castagnole" : 1 , "semanidi": 1 , "boga":1}
+    pesci : { "castagnole" : 1 , "serranidi": 1 , "boga":1}
 }, {
     id : 1,
     depth : 5,
@@ -153,7 +151,7 @@ var mapping = [ {
     visibilita : 6,
     fondale : "roccia",
     benthos : { "alghe verdi" : 1 , "alghe rosse" : 1 , "spugne":1 , "clandocola" : 1 , "ricci" :1 , "stelle" : 1},
-    pesci : { "castagnole" : 1 , "seracidi" : 1 , "anthias" :1 ,"boga":1}
+    pesci : { "castagnole" : 1 , "serranidi" : 1 , "anthias" :1 ,"boga":1}
 }, {
     id : 0,
     depth : 0,
