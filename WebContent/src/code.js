@@ -1,7 +1,7 @@
 function handle_click_on_station(point) {
     $("#media")
 	.replaceWith(
-	    '<div id="media"><div id="media_divers"></div><div id="media_benthos"></div><div id="media_pesci"></div><div id="media_img"></div><div id="media_video"></div></div>');
+	    '<div id="media"><div id="media_divers"></div><div id="media_img"></div><div id="media_video"></div><div id="media_benthos"></div><div id="media_pesci"></div></div>');
     
     var id = parseInt(point.id);
     console.log("Clicked on "+id);
@@ -456,21 +456,27 @@ function create_media_from(node){
 	var rv=[];
 	for (var k in node) {
 //		console.log( " key = "+k);
-		if (typeof db[k] == "undefined") {
-			console.log("TOADD in src/db.js '"+k+"' : {url : \"media/"+k+".jpg\",description : \"Breve descrizione\" }");
-			continue;
-		}
+	    if (typeof db[k] == "undefined") {
+		//--- Non e' nel db allora si prende dal node
+		
+		desc_ = ""+k;
+		//		url_  = db[k].url ;
+		url= k
+		
+		//		console.log("TOADD in src/db.js '"+k+"' : {url : \"media/"+k+".jpg\",description : \"Breve descrizione\" }");
+//		continue
+	    } else {
 		desc_ = db[k].description;
 		if (desc_== "Breve descrizione"){
 			desc_ = ""+k;
 		}
-		url_  = db[k].url ;
-		
-		rv.push({
-			type : "img",
-			url : url_,
-			description : desc_
-		});
+		url_  = db[k].url ;		
+	    }
+	    rv.push({
+		type : "img",
+		url : url_,
+		description : desc_
+	    });
 	}
 	return rv;
 }
