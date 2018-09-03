@@ -45,7 +45,12 @@ function load_news( just_first ) {
 	    html+='<div class="col-xs-'+col_text+'">'+news.body+'</div>'
 	}
 	if ('img' in news) {
-	    html+="<div class='col-xs-4'><img class='img img-responsive img-rounded' src='"+news.img+"'><br><strong><ul></div>"
+	    if ('link' in news) {
+		html+="<div class='col-xs-4'><a href='"+news.link+"'><img class='img img-responsive img-rounded' src='"+news.img+"'></a><br><strong><ul></div>"		
+	    } else {
+		html+="<div class='col-xs-4'><img class='img img-responsive img-rounded' src='"+news.img+"'><br><strong><ul></div>"
+	    }
+
 	    col_text=8
 	}
 	html+='</div>'

@@ -12,7 +12,7 @@ associati=[
 	female : "true"
       }
     , { name : "Maurizio C." ,
-	level : "Rec 3",
+	level : "Tech 1",
 	image : "images/associati/Maurizio.jpg",
 	female : "false"
       }
@@ -22,7 +22,7 @@ associati=[
 	female : "true"
       }
     , { name : "Marco A.G." ,
-	level : "Fundamentals",
+	level : "Cave 1",
 	image : "images/associati/gonzalo.jpg",
 	female : "false"
       }
@@ -44,7 +44,7 @@ associati=[
 	female : "false"
       }
     , { name : "Flavia A." ,
-	level : "Fundamentals",
+	level : "Tech 1",
 	image : "images/associati/flavia.jpg",
 	female : "true"
       }
