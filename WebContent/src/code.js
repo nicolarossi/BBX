@@ -1,15 +1,20 @@
+var id_sagola={}
+var last_sagola={}
+
 function handle_click_on_station(point) {
     $("#media")
 	.replaceWith(
 	    '<div id="media"><div id="media_divers"></div><div id="media_img"></div><div id="media_video"></div><div id="media_benthos"></div><div id="media_pesci"></div></div>');
     
-    var id = parseInt(point.id);
-    console.log("Clicked on "+id);
+    var id = parseInt(point.id)-id_sagola[point.sagola];
+    var sagola=point.sagola
+    console.log("Clicked on "+sagola+' '+id);
     var m = null;
     var mapping_selected;
     
-    //    for (var j = 0; j < mapping.length; j++) {
-    j=mapping.length-id-1;
+
+    //    j=mapping.length-id-1;
+    j=last_sagola[sagola]-id;
     if (parseInt(mapping[j].id) == id) {
 	m = mapping[j].media;
 	mapping_selected=mapping[j];
@@ -216,7 +221,14 @@ function print_transetti_old() {
 }
 
 function print_transetti() {
- var str=''	;
+    var str=''	;
+    str+='<div class="panel panel-transparent" id="img_transetti">';
+    str+='<div class="panel panel-body"style="border-bottom-width: 20px;">';
+    str+='<img src="media/argentarola/transetti_Argentarola.jpg" >';
+    str+='</div>';
+    str+='</div>';
+
+    
     str+='<div class="panel-heading" id="info_panel_heading">';
     str+='<h4>Transetti</h4>';
     str+='</div>';
@@ -429,19 +441,20 @@ function create_lightbox_with(m) {
 var data = null;
 var graph = null;
 var max_val;
-function add_station_at(x, y, z, id, data, val) {
-	//console.log("val[" + id + "]=" + val);
-	if (id==1) {
-		
-	}
+function add_station_at(x, y, z, id, data, val, sagola) {
+    tmp_id=id_sagola[sagola]+id;
+    console.log("val[" + id + "]=" + val);
+    console.log("tmp_id : [" + tmp_id + "]" );
+
 	if ( typeof val != "undefined" ) {
-		data.add({
-			id : id,
+	    data.add({
+		sagola : sagola,
+			id : tmp_id,
 			x : x,
 			y : y,
 			z : z,
 		    style : val,
-		    title: 'Stazione: '+id
+		    title: 'Stazione: '+id +'<br> Sagola: '+sagola
 		});		
 	}
 }
@@ -485,35 +498,89 @@ function drawVisualization() {
 	// console.log("Disegniamo " + $("#parametro_da_graficare").val());
 	// Create and populate a data table.
 	data = new vis.DataSet();
-	// create some nice looking data with mapping
-	var x = 42.4185;
-	var y = 11.0806;
+    // create some nice looking data with mapping
 
-	add_station_at(x, y, 0, mapping[(mapping.length - 1)].id, data,
-			get_parameter_value_selected(mapping, 
-					(mapping.length - 1), 
-					$("#parametro_da_graficare").val())
-					
+    var orig_sagola={};
+/*
+    orig_sagola['S']  = {x:42.4185 , y:11.0806};
+    orig_sagola['NE'] = {x:42.45889, y:11.32889};
+    orig_sagola['N']  = {x:42.45   , y:11.31667};
+    orig_sagola['W']  = {x:42.44139, y:11.29972};
+*/
+    orig_sagola['S']  = {x:42.4185 , y:11.0806};
+    orig_sagola['NE'] = {x:42.45889, y:11.32889};
+    orig_sagola['N']  = {x:42.45   , y:11.31667};
+    orig_sagola['W']  = {x:42.44139, y:11.29972};
+
+    id_sagola['S']=1000
+    id_sagola['N']=2000
+    id_sagola['NE']=3000
+    id_sagola['W']=4000
+    
+
+    sagole=['N','NE','S','W']
+
+    last_sagola['S']=0
+    last_sagola['N']=0
+    last_sagola['NE']=0
+    last_sagola['W']=0
+    
+    for (var is=0; is<sagole.length;is++) {
+	var sagola=sagole[is]
+//	console.log('print sagola '+sagola)
+	var x = orig_sagola[sagola].x;
+	var y = orig_sagola[sagola].y;
+//	console.log('orig '+x+' '+y)
+
+	var first=-1
+	var last=-1
+	for (var i = 0; i<mapping.length ; i++) {
+	    if (mapping[i].sagola != sagola) {
+		continue
+	    }
+	    if (first==-1) {
+		first=i
+	    }
+	    last=i
+	}
+    
+	last_sagola[sagola]=last
+	
+	add_station_at(x, y, 0, mapping[last].id, data,
+		       get_parameter_value_selected(mapping, 
+						    (last), 
+						    $("#parametro_da_graficare").val()),
+		       mapping[last].sagola
 		);
-	for (var i = mapping.length - 2; i >= 0; i--) {
-		var teta = Math.PI * (180 + mapping[i].bussola) / 180.;
-		// console.log("id: "+(i+1)+" teta: "+teta+"
-		// bussola: "+mapping[i].bussola);
+	for (var i = last-1; i >= first; i--) {
+	    var teta = Math.PI * (180 + mapping[i].bussola) / 180.;
+//	    console.log("Sagola "+sagola+"id: "+(i+1)+" teta: "+teta+" bussola: "+mapping[i].bussola);
 
-		var nx = mapping[i + 1].dist * Math.cos(teta);
-		var ny = mapping[i + 1].dist * Math.sin(teta);
-		x = x + nx;
-		y = y + ny;
-		// console.log("id:"+mapping[i].id );
-		add_station_at(x, y, -mapping[i].depth, mapping[i].id, data,
-				get_parameter_value_selected(mapping, (i), $(
-						"#parametro_da_graficare").val()));
+	    var nx,ny;
+//	    if (true) {
+	    if (false) {
+		nx = mapping[i + 1].dist * Math.cos(teta)/82853;
+		ny = mapping[i + 1].dist * Math.sin(teta)/111071.7;
+	    } else {
+		nx = mapping[i + 1].dist * Math.cos(teta);
+		ny = mapping[i + 1].dist * Math.sin(teta);
+	    }
+	    x = x + nx;
+	    y = y + ny;
+	    
+//	    console.log(" (x,y) :("+x+","+y+")")
+	    add_station_at(x, y, -mapping[i].depth, mapping[i].id, data,
+			       get_parameter_value_selected(mapping, (i), $(
+				   "#parametro_da_graficare").val()),
+			       mapping[i].sagola
+			      );
 	}
-
-	function capitalize(str){
-		return str.substr(0,1).toUpperCase()+str.substr(1).toLowerCase();
-	}
-
+    }
+    
+    function capitalize(str){
+	return str.substr(0,1).toUpperCase()+str.substr(1).toLowerCase();
+    }
+    
     function phys_dim_of(nh) {
 	if (nh=="temperatura") return "C";
 	if (nh=="visibilita") return "m";
@@ -536,7 +603,8 @@ function drawVisualization() {
 	    legendLabel : human_readable($("#parametro_da_graficare").val(),true),
 		showPerspective : true,
 		showGrid : true,
-		showShadow : true,
+	    showShadow : true,
+	    // 
 		yValueLabel : function(value) {
 		    var s=Math.round( ((value/1583)+25.110)*1000)/1000;
 		    return "N 42° " +s + " '" ;
@@ -551,9 +619,9 @@ function drawVisualization() {
 		return -value;
 	    } ,
 	    tooltip: function (point) {
-		var str= '<strong>Stazione:</strong><b>' +point.data.id + '</b><br>';
+		var str= '<strong>Stazione:</strong><b> ' + (parseInt(point.data.id)-parseInt(id_sagola[point.data.sagola])) +' '+point.data.sagola+'</b><br>';
 		var tipo_var=$("#parametro_da_graficare").val();
-		idx=mapping.length-(parseInt(point.data.id)+1);
+		idx=id_sagola[point.data.sagola]+last_sagola[point.data.sagola]-(parseInt(point.data.id));
 		str+='<strong>'+human_readable(tipo_var,false)+':</strong> '+mapping[idx][tipo_var]+' '+phys_dim_of(tipo_var)+'<br>';
 		return str;
 	    },

@@ -9,6 +9,7 @@ function index_of_station(id){
 }
 
 var mapping = [ {
+    sagola: 'N',
     id : 10,
     depth : 50,
     bussola : 110,
@@ -25,6 +26,7 @@ var mapping = [ {
     media : [],
     impatto_umano : 0
 }, {
+    sagola: 'N',
     id : 9,
     depth : 45.8 ,
     bussola : 120,
@@ -42,6 +44,7 @@ var mapping = [ {
     media : [],
     colore : 1 /* fmGJqTd0Qt8 */
 }, {
+    sagola: 'N',
     id : 8,
     depth : 39.3,
     bussola : 150,
@@ -59,6 +62,7 @@ var mapping = [ {
     media : [],
     pesci : { "anthias" : "banchi di 10"}
 },{
+    sagola: 'N',
     id : 7 ,
     depth : 35,
     bussola : 150,
@@ -78,6 +82,7 @@ var mapping = [ {
 	description : "Una immagine"
 	}]
 }, {
+    sagola: 'N',
     id : 6,
     depth : 30,
     bussola : 150,
@@ -95,6 +100,7 @@ var mapping = [ {
     } ],
     pesci : { "anthias" : 1 }
 }, {
+    sagola: 'N',
     id : 5,
     depth : 24.3,
     bussola : 150,
@@ -109,6 +115,7 @@ var mapping = [ {
     media : [],
     pesci : { "castagnole" : 1 },
 }, {
+    sagola: 'N',
     id : 4,
     depth : 20,
     bussola : 130,
@@ -122,6 +129,7 @@ var mapping = [ {
     media : [],
     pesci : { "saraghi": 7 , "triglie" : 3 , "carabinieri" : 2 , "grongo" : 1 , "anthias" : "> 30 "}
 }, {
+    sagola: 'N',
     id : 3,
     depth : 15,
     bussola : 130,
@@ -138,6 +146,7 @@ var mapping = [ {
     media : [],
     pesci: { "saraghi": 1 , "grongo" : 1 , "castagnole" : 1 }
 }, {
+    sagola: 'N',
     id : 2,
     depth : 10,
     bussola : 120,
@@ -156,6 +165,7 @@ var mapping = [ {
     media : [],
     pesci : { "castagnole" : 1 , "serranidi": 1 , "boga":1}
 }, {
+    sagola: 'N',
     id : 1,
     depth : 5,
     bussola : 160,
@@ -170,6 +180,7 @@ var mapping = [ {
     media : [],
     pesci : { "castagnole" : 1 , "serranidi" : 1 , "anthias" :1 ,"boga":1}
 }, {
+    sagola: 'N',
     id : 0,
     depth : 0,
     bussola : 0,
@@ -180,7 +191,256 @@ var mapping = [ {
     dist : 8,
     Nord : "42Â° 25.110' ",
     Est : "11Â° 4.839' "
-} ];
+}
+		//---- Queste sono per la sagola Nord-Est
+		,{
+		    sagola: 'NE',
+		    id : 10,
+		    depth : 40,
+		    bussola : 20,
+		    dist: 13,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 9,
+		    depth : 35,
+		    bussola : 10,
+		    dist: 20,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 8,
+		    depth : 30,
+		    bussola : 350,
+		    dist: 9,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 7,
+		    depth : 25,
+		    bussola : 0,
+		    dist: 12,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 6,
+		    depth : 20,
+		    bussola : 30,
+		    dist: 11,
+		    		    temperatura : 00,
+
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 5,
+		    depth : 15,
+		    bussola : 20,
+		    dist: 4,
+		    		    temperatura : 00,
+
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 4,
+		    depth : 13,
+		    bussola : 0,
+		    dist: 12,
+		    		    temperatura : 00,
+
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 3,
+		    depth : 10,
+		    bussola : 350,
+		    dist: 11,
+		    		    temperatura : 00,
+
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 2,
+		    depth : 6,
+		    bussola : 350,
+		    dist: 2,
+		    		    temperatura : 00,
+
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 1,
+		    depth : 3,
+		    bussola : 350,
+		    dist: 5,
+		    		    temperatura : 00,
+
+		    divers: [ "BBX" ],
+		}, {
+		    sagola: 'NE',
+		    id : 0,
+		    depth : 0,
+		    bussola : 0,
+		    dist: 4,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		    Nord: "N 42°25.152'",
+		    Est: "E 011°04.944'"
+}, {
+		    sagola: 'S',
+		    id : 8,
+		    depth : 40,
+		    bussola : 300,
+		    dist: 9,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 7,
+		    depth : 35,
+		    bussola : 320,
+		    dist: 8,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 6,
+		    depth : 30,
+		    bussola : 330,
+		    dist: 10,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 5,
+		    depth : 25,
+		    bussola : 300,
+		    dist: 9,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 4,
+		    depth : 20,
+		    bussola : 310,
+		    dist: 8,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 3,
+		    depth : 15,
+		    bussola : 300,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 2,
+		    depth : 10,
+		    bussola : 330,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 1,
+		    depth : 5,
+		    bussola : 300,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'S',
+		    id : 0,
+		    depth : 0,
+		    bussola : 0,
+		    dist: 0,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		    Nord: "N 42°25.152'",
+		    Est: "E 011°04.944'"
+}, {
+		    sagola: 'W',
+		    id : 8,
+		    depth : 40,
+		    bussola : 30,
+		    dist: 9,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 7,
+		    depth : 35,
+		    bussola : 30,
+		    dist: 4,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 6,
+		    depth : 30,
+		    bussola : 40,
+		    dist: 9,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 5,
+		    depth : 25,
+		    bussola : 20,
+		    dist: 8,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 4,
+		    depth : 20,
+		    bussola : 20,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 3,
+		    depth : 15,
+		    bussola : 20,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 2,
+		    depth : 10,
+		    bussola : 50,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 1,
+		    depth : 5,
+		    bussola : 60,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+}, {
+		    sagola: 'W',
+		    id : 0,
+		    depth : 0,
+		    bussola : 0,
+		    dist: 5,
+		    temperatura : 00,
+		    divers: [ "BBX" ],
+		    Nord: "N 42°25.152'",
+		    Est: "E 011°04.944'"
+}
+
+
+	      ];
 
 console.log('index_of_station(3) ',index_of_station(3))
 mapping[index_of_station(3)].media.push({type:"img", url : "media/argentarola/3/benthos/3f_Sabella_sp..jpg", description : "Sabella"})
