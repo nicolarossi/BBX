@@ -58,10 +58,13 @@ function load_news( just_first ) {
 	body.html(html);
 
 	var footer=$("<div class='panel-footer'></div>");
+	html_footer=""
 	if ('date' in news) {
-	    footer.html("<strong>"+news.date+"</strong>");
-	}
-		   
+	    html_footer+=("<strong>"+news.date+"</strong><br>");
+	} 
+	html_footer+="<a href=\"whatsapp://send?text="+news.title+"\" data-action=\"share/whatsapp/share\"><span class=\"glyphicon glyphicon-share\"></span> Condividi via Whatsapp</a>"	 ;
+
+	footer.html(html_footer);
 	panel.append(header,body,footer);
 
 	el.append(panel);
