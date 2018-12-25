@@ -30,7 +30,7 @@ function load_news( just_first ) {
 	} else {
 	    icon+='<span class="glyphicon glyphicon-'+news.type+'" aria-hidden="true"></span>'
 	}
-	header.html("<strong><h2>"+icon+' '+news.title+"</h2></strong>");
+	header.html("<strong><h2 id=\""+news.id +"\">"+icon+' '+news.title+"</h2></strong>");
 
 	var body=$("<div class='panel-body'></div>");
 
