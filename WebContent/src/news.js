@@ -66,8 +66,10 @@ function load_news( just_first ) {
 
 	
 	
-	html_footer+="<a href=\"whatsapp://send\" data-text=\""+news.title.replace(/<[^>]+>/g,"")+"\" data-href=\"#"+news.id+"\" <span class=\"glyphicon glyphicon-share\"></span> Condividi via Whatsapp</a>"	 ;
+//	html_footer+="<a href=\"whatsapp://send\" data-text=\""+news.title.replace(/<[^>]+>/g,"")+"\" data-href=\"#"+news.id+"\" <span class=\"glyphicon glyphicon-share\"></span> Condividi via Whatsapp</a>"	 ;
 
+	html_footer+="<a href=\"whatsapp://send?text=text to share\" data-action=\"share/whatsapp/share\"><span class=\"glyphicon glyphicon-share\"></span> Condividi via Whatsapp</a>"	 ;
+	
 //	<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="http://www.pippo.com" class="wa_btn wa_btn_s" style="display:none">Share</a>
 	footer.html(html_footer);
 	panel.append(header,body,footer);
