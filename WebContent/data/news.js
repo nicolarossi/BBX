@@ -32,7 +32,7 @@ news_list=[
 	type : 'leaf',
 	date : '2019/02/05',
 	title : "Continua il progetto sulla <em>Dendrophylia ramea</em>",
-	body : "In data 5 Febbraio 2019, sul sito di RaiNews 24, il canale informativo della tv nazionale, ha publicato un articolo per descrivere il progetto <em>Dendrophylia ramea</em><br>. In Italia questa specie &egrave; rimasta in penombra per moltissimi anni - solo qualche esemplare raccolto dai pescatori e custodito nei musei - fino a quando non sono iniziate le prime ricerche con i robot filoguidati (ROV) e le esplorazioni dei primi subacquei tecnici capaci di immergersi fino a 80 metri di profondit&agrave;",
+	body : "In data 5 Febbraio 2019, sul sito di RaiNews 24, il canale informativo della tv nazionale, &egrave; stato pubblicato un ulteriore articolo sul progetto Dendrophylia ramea cui hanno contribuito i subacquei GUE dell¡¯Associazione. In Italia questa specie &egrave; rimasta in penombra per moltissimi anni - ad eccezione di qualche esemplare raccolto dai pescatori o custodito nei musei - fino a quando la tecnologia e le esplorazioni di subacquei tecnici in grado di immergersi a profondit&agrave; elevate hanno svelato diversi siti con questa specie.",
 	img: "media/dendrophilya.jpg",
 	link: "http://www.rainews.it/dl/rainews/media/Quattro-mesi-sotto-acqua-per-uno-sguardo-unico-sugli-abissi-ecco-la-regina-dei-coralli-213b513b-5673-49e9-806d-9b829b6e7879.html#foto-1"
     }
