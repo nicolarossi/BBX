@@ -4,6 +4,7 @@ var ol_geolocation;
 var style;
 var style_you_are_here;
 
+var site_maps={};
 var buddy_list;
 
 var main_scope={};

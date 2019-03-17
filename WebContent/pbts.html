@@ -130,9 +130,10 @@
       create_map();
 
       $.ajax({url: "data/maps.json",
-      dataType:"application/json",
+      dataType:"json",
       success: function(result) {
       site_maps=result ;
+      console.log(result);
       }});
 
       $.ajax({url: "data/measurement.json",
