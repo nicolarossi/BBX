@@ -6,4 +6,5 @@ tool/authentication_data.*
 __pycache__/
 to_install/
 *.pyc
+.#*
 .tmp
