@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import urllib,sys, json,os
 from openpyxl import load_workbook
 from authentication_data import config_authentication
@@ -98,15 +97,37 @@ def import_measurement(sheet,start_column_measurement,maps,measurement,dropbox_f
         #--- Read measurement 
         measure={}
 
-        list_measures=["Date", "Time", "Divers", "Depth (m)", "Visibility (m)", "Flow Intensity","Flow Direction(degree)", "Temperature (Celsius)","Compass Direction (Degrees)","Photo Distance (Mt)","URL/Photo Name","Bottom Type","Benthos (Species/Number)","Anthropic Impact","Fish (Species/Number)"]
+      
+        list_measures=["Site","Station Progressive Number","Date","Time","Divers","Depth (m)","Visibility (m)","Tools","Flow Intensity (High/Medium/Low)","Flow Direction (Degrees)","Temperature (Celsius)","Compass Direction (Degrees)","Photo Distance (Mt)","URL/Photo Name","Bottom Type","Benthos (Species/Number)","Anthropic Impact","Fish (Species/Number)"]
 
-        column='C'
+        column=chr(ord('A')-1)
         j=0
+        
         for dim in list_measures:
-            val_dim=sheet[column+str(i)].value
-            if (val_dim is None):
+            column=chr(ord(column)+1)
+            if (dim == "Site" or dim == "Station Progressive Number"):
                 continue
+            val_dim = sheet[column+str(i)].value
 
+            # Manage default value
+            if (val_dim is None):
+                if (dim=="Tools"):
+                    val_dim="None"
+                elif (dim=="Visibility (m)"):
+                    val_dim=""
+                elif (dim =="Temperature (Celsius)"):
+                    val_dim=""
+                elif (dim =="Time"):
+                    val_dim="12:00"
+                elif (dim == "Compass Direction (Degrees)"):
+                    val_dim="n/a"
+                elif (dim == "Compass Direction (Degrees)"):
+                    val_dim="n/a"
+                else:
+                        print('In cell \t'+(column+str(i))+' is missing dim \t' + dim )
+                        continue
+
+            # manage non empty value
             if (dim == "Time"):
                 try :
                     measure[dim]=''+str(val_dim.hour)+':'+str(val_dim.minute)
@@ -136,7 +157,6 @@ def import_measurement(sheet,start_column_measurement,maps,measurement,dropbox_f
             else:
                 measure[dim]=val_dim
 
-            column=chr(ord(column)+1)
 
 
         #---- Creare l'alberatura
