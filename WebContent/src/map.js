@@ -31,6 +31,7 @@ $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
 
 
 function create_map(){
+    console.log('in create_map');
     view=new ol.View({
             center: ol.proj.fromLonLat([14.477869, 40.694812]),
             zoom: 5
@@ -114,12 +115,12 @@ function create_map(){
 		style: style
             })
 	],
-	view: view,
-	controls: ol.control.defaults().extend([
-	    new ol.control.ScaleLine(),
-	    new ol.control.OverviewMap(),	    
-	    new ol.control.ZoomSlider()
-	])
+	view: view
+//	controls: ol.control.defaults().extend([
+//	    new ol.control.ScaleLine(),
+//	    new ol.control.OverviewMap(),	    
+//	    new ol.control.ZoomSlider()
+//	])
     });
     
     //--- Selettore al mouse hove
