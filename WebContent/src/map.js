@@ -259,7 +259,8 @@ function selected_site(id){
     console.log("into selected_id "+id);
 
     $("#select_stazione").remove()
-
+    $('#slide_stations').empty()
+    
     var site=site_maps[id]
 
     n_stations=0
@@ -269,10 +270,15 @@ function selected_site(id){
     }
     
     if (n_stations==0) {
+	$('#label_select_stazione').html('Nessuna stazione attualmente attiva');
+	$('#slide_stations').hide();	
 	return ;
     }
 
     var sel = $('<select class="form-control" id="select_stazione" onchange="selected_station()">').insertAfter('#label_select_stazione');
+
+    $('#label_select_stazione').html('Seleziona stazione da visualizzare:');
+    $('#slide_stations').show();	
     
     for (var k in site) {
 	var info=site[k]
