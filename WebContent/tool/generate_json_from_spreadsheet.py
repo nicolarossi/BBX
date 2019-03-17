@@ -39,8 +39,8 @@ def import_site(sheet,features,maps):
         geometry={}
         geometry['type']='Point'
         coordinates=[]
-        coordinates.append(sheet['I'+str(i)].value)
         coordinates.append(sheet['H'+str(i)].value)
+        coordinates.append(sheet['G'+str(i)].value)
         geometry['coordinates']=coordinates
         
         feature['properties']=properties
@@ -65,8 +65,8 @@ def import_site(sheet,features,maps):
             continue
         
         stations[station_id]={}
-        stations[station_id]['description']=sheet['F'+str(i)].value
-        stations[station_id]['depth']=sheet['G'+str(i)].value
+        stations[station_id]['description']=sheet['E'+str(i)].value
+        stations[station_id]['depth']=sheet['F'+str(i)].value
 
         maps[site]=stations
         
