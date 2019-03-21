@@ -239,8 +239,6 @@ function selected_station() {
     id_stazione=$("#select_stazione").val()
     console.log("selected station "+id_stazione)
 
-    console.log("selected station "+id_stazione)
-
     $("#view_measurement").empty();
 //    $("#view_measurement").append("<h3>Che ci mettiamo per la stazione ["+id_stazione+"]?</h3>")
     /*
@@ -268,6 +266,7 @@ function selected_site(id){
     for(var k in site) {
 	n_stations++
     }
+
     
     if (n_stations==0) {
 	$('#label_select_stazione').html('Nessuna stazione attualmente attiva');
@@ -287,7 +286,11 @@ function selected_site(id){
 	console.log('aggiunto : '+k);
 
     }
-    
+    if (n_stations==1) {
+	$('#label_select_stazione').html('Stazione attualmente attiva');
+	selected_station();
+    }
+
 }
 
 
