@@ -170,8 +170,14 @@ def import_measurement(sheet,start_column_measurement,maps,measurement,dropbox_f
         measurement[id_stations]=v
 
 def import_image_from_dropbox(dropbox_folder,image_folder,measure):
-    
+    if ( not 'url' in measure):
+        print(' missing ')
+        return
+
+
+        
     print(' Import image from dropbox folder...')
+    
     dropbox_path=dropbox_folder+measure['url']
 
 #    dest_format='png'
@@ -181,7 +187,6 @@ def import_image_from_dropbox(dropbox_folder,image_folder,measure):
     dest_dir=os.path.dirname(tmp)
             
     dest_file = os.path.basename(image_folder+measure['url'])
-
 
     dest_path=dest_dir+'/'+dest_file
 
@@ -260,6 +265,7 @@ def main(argv):
         if measurement_title == sheet.title:
             import_measurement(sheet,start_column_measurement,maps,measurement,dropbox_folder,image_folder)
 
+           
     #
     dive_site['features'] = features
 
