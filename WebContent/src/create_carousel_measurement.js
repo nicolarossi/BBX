@@ -44,7 +44,7 @@ function create_carousel_measurement(m,id_carousel) {
 	description+='<br>'
 
 	console.log(' url '+m[i].url)
-	if ( m[i].url != "undefined" ) {
+	if ( m[i].url !== "undefined" ) {
 	    img_str='<img src="img/pbts/' + m[i].url
 		+ '" style="width:100%" alt="image ' +(i) + '">'	    
 	} else {
