@@ -263,10 +263,9 @@ function selected_site(id){
 
     n_stations=0
     
-    for(var k in site) {
+    for (var k in site) {
 	n_stations++
     }
-
     
     if (n_stations==0) {
 	$('#label_select_stazione').html('Nessuna stazione attualmente attiva');
@@ -274,6 +273,7 @@ function selected_site(id){
 	return ;
     }
 
+    
     var sel = $('<select class="form-control" id="select_stazione" onchange="selected_station()">').insertAfter('#label_select_stazione');
 
     $('#label_select_stazione').html('Seleziona stazione da visualizzare:');
@@ -288,8 +288,8 @@ function selected_site(id){
     }
     if (n_stations==1) {
 	$('#label_select_stazione').html('Stazione attualmente attiva');
-	selected_station();
     }
+    selected_station();
 
 }
 
