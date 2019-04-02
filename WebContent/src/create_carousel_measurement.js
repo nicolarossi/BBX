@@ -43,9 +43,9 @@ function create_carousel_measurement(m,id_carousel) {
 	date_time=''+m[i]['Date']+' '+m[i]['Time']+'<br>'
 	description+='<br>'
 
-	if ( m[i].url ) {
+	if ( m[i].url != "undefined" ) {
 	    img_str='<img src="img/pbts/' + m[i].url
-		+ '" style="width:100%" alt="image ' +(i) + '">'
+		+ '" style="width:100%" alt="image ' +(i) + '">'	    
 	} else {
 	    img_str=''	    
 	}
