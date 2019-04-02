@@ -42,8 +42,15 @@ function create_carousel_measurement(m,id_carousel) {
 	
 	date_time=''+m[i]['Date']+' '+m[i]['Time']+'<br>'
 	description+='<br>'
-	str += '<div class="item ' + active + '"><img src="img/pbts/' + m[i].url
-	    + '" style="width:100%" alt="image ' +(i) + '">'
+
+	if ( m[i].url ) {
+	    img_str='<img src="img/pbts/' + m[i].url
+		+ '" style="width:100%" alt="image ' +(i) + '">'
+	} else {
+	    img_str=''	    
+	}
+	
+	str += '<div class="item ' + active + '">'+img_str
 	    +'<div class="carousel-caption carousel-caption-below">'
 	    +'<div class="panel panel-transparent">'
 	    +'<div class="panel-heading"> Measurement date: '+date_time+'</div>'
