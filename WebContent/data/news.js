@@ -1,4 +1,5 @@
 
+
 news_list=[
     {
 	id : 1 ,
@@ -35,8 +36,15 @@ news_list=[
 	body : "In data 5 Febbraio 2019, sul sito di RaiNews 24, il canale informativo della tv nazionale, &egrave; stato pubblicato un ulteriore articolo sul progetto Dendrophylia ramea cui hanno contribuito i subacquei GUE dell'Associazione. In Italia questa specie &egrave; rimasta in penombra per moltissimi anni - ad eccezione di qualche esemplare raccolto dai pescatori o custodito nei musei - fino a quando la tecnologia e le esplorazioni di subacquei tecnici in grado di immergersi a profondit&agrave; elevate, hanno svelato diversi siti con questa specie.",
 	img: "media/dendrophilya.jpg",
 	link: "http://www.rainews.it/dl/rainews/media/Quattro-mesi-sotto-acqua-per-uno-sguardo-unico-sugli-abissi-ecco-la-regina-dei-coralli-213b513b-5673-49e9-806d-9b829b6e7879.html#foto-1"
+},
+    {
+	id : 5 ,
+	type : 'leaf',
+	date : '2019/04/26',
+	title : "BBX divers and scientific diving",
+	body : 'Un video sul progetto Dendrophyllia ramea svolto con il supporto scientifico di Eva Salvati, che abbiamo presentato alla 5a edizione della Conferenza Europea sull&apos; immersione scientifica. Subacquei BBX e GUE hanno partecipato al progetto. Claudio Provenzani, Andrea D&apos;Ambrosi, Fabio Portella, Stefano Gualtieri, Massimiliano Sabatini, Elena Romano. Blue Research staff: William Santero, Francesco Leonini, Simona Sorrenti. Un ringraziamento speciale a Capo Murro Diving Center per il supporto logistico.',
+	video: "https://vimeo.com/331839972/2c6d62b70d"
     }
-
 
     /*
       HTML entities converter:
