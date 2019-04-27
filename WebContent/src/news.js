@@ -53,6 +53,12 @@ function load_news( just_first ) {
 
 	    col_text=8
 	}
+	if ('vimeo' in news) {
+	    console.log("inseriamo vimeo")
+	    html+="<div class='embed-container'><iframe src='"+news.vimeo+"' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>"
+	} else {
+    	    console.log("non c'e' vimeo")
+	}
 	html+='</div>'
 	
 	body.html(html);
