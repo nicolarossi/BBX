@@ -43,7 +43,8 @@ news_list=[
 	date : '2019/04/26',
 	title : "BBX e immersione scientifica",
 	body : 'Un video sul progetto Dendrophyllia ramea svolto con il supporto scientifico di Eva Salvati, che abbiamo presentato alla 5a edizione della Conferenza Europea sull&apos; immersione scientifica. Subacquei BBX e GUE hanno partecipato al progetto. Claudio Provenzani, Andrea D&apos;Ambrosi, Fabio Portella, Stefano Gualtieri, Massimiliano Sabatini, Elena Romano. Blue Research staff: William Santero, Francesco Leonini, Simona Sorrenti. Un ringraziamento speciale a Capo Murro Diving Center per il supporto logistico.',
-	vimeo: "//player.vimeo.com/331839972/2c6d62b70d"
+	img: "img/news/euconf2019_eva.png",
+	link: "https://vimeo.com/331839972/2c6d62b70d"
     }
 
     /*
