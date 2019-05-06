@@ -223,6 +223,7 @@ def main(argv):
     #------
     #--- Config parameter
     #-
+    print('Authenticating... ')
     auth=config_authentication()
     URL=auth['URL']
     app_key=auth['app_key']
@@ -243,7 +244,9 @@ def main(argv):
     dive_site['type'] = 'FeatureCollection'
 #
     #- Download the file
+    print('Downloading file ...')
     urllib.urlretrieve (URL, path_excel)
+    print('...done ')
 
     
     # Manage the spreadsheet
