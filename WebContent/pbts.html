@@ -11,6 +11,7 @@
     <title>Project Baseline - Tyrrenian sea</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 
@@ -129,14 +130,14 @@
       var maps={};
       create_map();
 
-      $.ajax({url: "data/maps.json",
+      $.ajax({url: "data/maps.json?nocache=" + (new Date()).getTime(),
       dataType:"json",
       success: function(result) {
       site_maps=result ;
       console.log(result);
       }});
 
-      $.ajax({url: "data/measurement.json",
+      $.ajax({url: "data/measurement.json?nocache=" + (new Date()).getTime(),
       dataType:"json",
       success: function(result) {
       measurement=result;
