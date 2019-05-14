@@ -22,8 +22,9 @@ associati=[
 	female : "true"
       }
     , { name : "Marco A.G." ,
-	level : "Cave 1",
+	level : "Tech 1",
 	image : "images/associati/gonzalo.jpg",
+	cave : "Cave 1",
 	female : "false"
       }
     , { name : "Francesca M." ,
