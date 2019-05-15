@@ -66,7 +66,18 @@ function create_map(){
                     	 width: 2
                      }),
                      fill: new ol.style.Fill({color: 'green'})
-                 })
+                 }),
+		    text:  new ol.style.Text({
+                        font: '12px helvetica,sans-serif',
+                        text: feature.get('id'),
+                        rotation: 360 * rnd * Math.PI / 180,
+                        fill: new ol.style.Fill({
+                            color: '#000'
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: '#fff',
+                            width: 2
+                        })
              });
         } else {
         	  style = new ol.style.Style({
