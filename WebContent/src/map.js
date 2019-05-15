@@ -69,12 +69,11 @@ function create_map(){
                      fill: new ol.style.Fill({color: 'green'})
                  }),
 		 text:  new ol.style.Text({
-                        font: '12px helvetica,sans-serif',
-                     text: ,
-		     /*feature['values_'].id */
+                        font: '12px helvetica,sans-serif,bold',
+                     text: feature['values_'].id ,
                         rotation: 0,
                         fill: new ol.style.Fill({
-                            color: '#000'
+                            color: 'darkblue'
                         }),
                         stroke: new ol.style.Stroke({
                             color: '#fff',
