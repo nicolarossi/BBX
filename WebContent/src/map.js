@@ -70,8 +70,9 @@ function create_map(){
                  }),
 		 text:  new ol.style.Text({
                         font: '12px helvetica,sans-serif',
-                        text: feature['values_'].id ,
-                        rotation: 360 * rnd * Math.PI / 180,
+                     text: ,
+		     /*feature['values_'].id */
+                        rotation: 0,
                         fill: new ol.style.Fill({
                             color: '#000'
                         }),
