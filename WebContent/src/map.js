@@ -50,6 +50,7 @@ function create_map(){
     style=function(feature, viewResolution){
         // access your radius property
         var r = feature.get('how_many_dives');
+	x_debug=feature;
         // create your style...
         var image;
         if (r>0) {
@@ -69,7 +70,7 @@ function create_map(){
                  }),
 		 text:  new ol.style.Text({
                         font: '12px helvetica,sans-serif',
-                        text: feature.get('id'),
+                        text: feature['values_'].id ,
                         rotation: 360 * rnd * Math.PI / 180,
                         fill: new ol.style.Fill({
                             color: '#000'
