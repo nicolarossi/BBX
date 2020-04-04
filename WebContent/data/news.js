@@ -46,6 +46,20 @@ news_list=[
 	img: "img/news/euconf2019_eva.png",
 	link: "https://vimeo.com/331839972/2c6d62b70d"
     }
+,
+    {
+	id : 6 ,
+	type : 'education',
+	date : '2020/03/25',
+	title : "BBX Virtual Dive #1",
+	body : "Mercoled&#xEC; 25 Marzo dalle 19:30 alle 21:30 si &egrave; svolta la prima serata virtuale organizzata dalla BigBlueXplorers (http://www.bigbluexplorers.com) dedicata all'archeologia subacquea con la presentazione, tenuta da Francesco &quote;Chicco&quote; Spaggiari Spaggiari dei progetti GUE delle Isole Eolie ed Egadi. I soci della BBX durante la presentazione hanno avuto la possibilita' di intervenire con delle domande su un tema cosi' interessante per tutti i subacquei. Queste isole della Sicilia custodiscono un patrimonio archeologico unico al mondo e importanti reperti, che risalgono addirittura al 241 a.c., vengono scoperti ogni anno grazie alle attivita' portate avanti dai subacquei della Global Underwater Explorers (http://www.gue.com) sotto il controllo della Soprintendenza del Mare Regione Siciliana (http://www.regione.sicilia.it/beniculturali/archeologiasottomarina).
+
+Questi appuntamenti virtuali, riservati ai soci della BBX, proseguiranno con cadenza settimanale con altre interessanti presentazioni durante le quali verranno trattati, tra gli altri argomenti, la decompressione, la manutenzione delle attrezzature subacquee, l'esplorazione delle grotte subacquee in Sardegna ed alcuni soci della BBX racconteranno le pi&uacute; recenti partecipazioni ad alcuni corsi della Global Underwater Explorers (Sidemount, CCR1 e RB80).
+
+Il prossimo appuntamento con la BBX_Virtual_Dive#2 &egrave; fissato per mercoled&igrave; 1 aprile 2020 alle ore 19:30, durer&agrave; fino alle 21:00, avr&agrave; come argomento la &#x22;Decompressione&#x22; presentato da #MarioArena.",
+	img: "img/news/virtual_dive_1.png",
+	link: "https://www.archeoxmed.org/"
+    }
 
     /*
       HTML entities converter:
