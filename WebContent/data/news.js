@@ -106,10 +106,113 @@ news_list=[
 	img: 'img/news/fotogrammetria.jpg',
 	link: 'https://www.facebook.com/luca.palezza'
     }
+    ,
+        {
+	id : 12 ,
+	type : 'education',
+	date : '2020/05/06',
+	title : "BBX Virtual Dive #7",
+	    body :`
+Mercoledì 6 maggio 2020, dalle ore 19.30 alle 21.00, i soci della
+
+BigBlueXplores si sono incontrati virtualmente nella
+<b>BBX_Virtual_Dive#7</b>, per la presentazione tenuta da <b>Fabio
+Portella</b> sullo “<b>sbarco alleato del 1943 in Sicilia,
+raccontato dai relitti scoperti in questi ultimi anni</b>”</p>
+<p ><br/>
+
+</p>
+<p >Fabio Portella,
+istruttore GUE, è il titolare del Capo Murro Diving Center a
+Siracusa. 
+</p>
+<p  >Quasi
+duemila anni fa, Virgilio cantava, nell’Eneide, la costa
+siracusana, la penisola del Plemmirio e Capo Murro di Porco che fu
+visto nei secoli come punto di confine tra terra e mare; oggi,
+invece, è il centro dell’Area Marina Protetta del Plemmirio. 
+</p>
+<p  >Da
+qui Fabio e il suo staff porta da anni i visitatori subacquei alla
+scoperta delle bellezze naturali sopra e sotto la superficie,
+facendoli tuffare in un mare pieno di storia e di vita.&nbsp;Il team
+di Capo Murro Diving offre così la possibilità di seguire <a href="https://www.capomurrodivingcenter.it/it/brevetti-e-corsi-sub/">corsi
+sub</a>, <a href="https://www.capomurrodivingcenter.it/it/brevetti-e-corsi-sub/">corsi
+apnea</a>, <a href="https://www.capomurrodivingcenter.it/it/brevetti-e-corsi-sub/">di
+conseguire brevetti di specializzazione</a> e di immergersi in tutta
+sicurezza in una delle aree marine più belle del Mediterraneo.</p>
+<p >Tornando alla
+presentazione, tra il 9 e il 14 luglio del 1943 oltre 300 aerei da
+trasporto C-47 invasero i cieli della Sicilia sud orientale:
+trasportavano paracadutisti, alianti e materiale bellico a supporto
+dell’operazione HUSKY, in quello che rappresentò il più grande
+dispiegamento di truppe aeree della Seconda Guerra Mondiale, prima
+dello sbarco in Normandia.</p>
+<p >Così uno dei
+principali relitti visitati durante la nostra immersione virtuale è
+stato proprio quello del Douglas C-47, chiamato anche Skytrain, un
+bimotore <a href="https://it.wikipedia.org/wiki/Aereo_da_trasporto_militare" target="Aereo da trasporto militare">da
+trasporto tattico a uso militare</a> (truppe e materiali), prodotto
+dall'azienda statunitense <a href="https://it.wikipedia.org/wiki/Douglas_Aircraft_Company" target="Douglas Aircraft Company">Douglas</a>
+negli <a href="https://it.wikipedia.org/wiki/Anni_1940" target="Anni 1940">anni
+quaranta</a>, ritrovato nel 2016 nel mare di Siracusa<!-- D -->, ad
+una profondità di circa 60 mt.</p>
+<p >L’immersione
+virtuale si è poi spostata sul relitto del Wellington un <a href="https://it.wikipedia.org/wiki/Bombardiere_medio" target="Bombardiere medio">bombardiere
+medio</a> bimotore <a href="https://it.wikipedia.org/wiki/Regno_Unito" target="Regno Unito">inglese</a>,
+realizzato sul finire degli <a href="https://it.wikipedia.org/wiki/Anni_1930" target="Anni 1930">anni
+trenta</a>; largamente impiegato nel corso della <a href="https://it.wikipedia.org/wiki/Seconda_guerra_mondiale" target="Seconda guerra mondiale">seconda
+guerra mondiale</a>, caratterizzato dall'inusuale struttura
+<a href="https://it.wikipedia.org/wiki/Geodetica" target="Geodetica">geodetica</a>,
+che garantiva al velivolo un'eccezionale robustezza.</p>
+<p >Fabio ha illustrato
+minuziosamente tutte le fasi che hanno portato alla precisa
+identificazione di questi relitti.</p>
+<p >Durante le
+esplorazioni sono stati rinvenuti anche i resti di numerosi mezzi da
+sbarco LCT (Landing Craft Tank) e LCM (Landing Craft Mechanized) e
+altri interessanti relitti come il Cant Z.506/B, un idrovolante della
+612° squadriglia con base ad Augusta decollato per ricercare i
+superstiti di un aereo SM 79 precipitato in mare a 205 miglia sud di
+Capo Passero.</p>
+<p >La presentazione di
+Fabio si è conclusa con le foto di alcuni “Smoke” dispositivi
+utilizzati durante  la guerra per creare una cortina fumogena molto
+densa e dare protezione alle navi. 
+</p>
+<p >Grazie Fabio!!! Nel
+ringraziarti ancora per la tua disponibilità, cercheremo molto
+presto di venire al tuo diving per immergerci con te nel mare di
+Siracusa.</p>
+<p ><br/>
+
+</p>
+<p >Gli appuntamenti
+virtuali, riservati ai soci della BBX, si fermano per il momento per
+lasciare spazio ai webminar organizzati dalla Gue Italia a livello
+nazionale. I nostri appuntamenti virtuali riprenderanno
+successivamente con altri interessanti incontri.</p>
+<p ><a name="_GoBack"></a>
+<br/>
+
+</p>
+<p  ><br/>
+
+</p>
+<p  ><br/>
+
+</p>
+`
+	    
+
+	    ,
+	img: 'img/news/portella-zoom.jpg',
+	link: 'https://www.facebook.com/fabio.portella.98'
+    }
 
     /*
       HTML entities converter:
-      https://mothereff.in/html-entities
+      https://mothereff.in/html-entities 
     */
 
 ];
