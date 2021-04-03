@@ -206,8 +206,7 @@ successivamente con altri interessanti incontri.</p>
 	    ,
 	img: 'img/news/portella-zoom.jpg',
 	link: 'https://www.facebook.com/fabio.portella.98'
-	},    
-
+	},
     {
 	id : 13 ,
 	type : 'education',
@@ -219,6 +218,18 @@ successivamente con altri interessanti incontri.</p>
 	/* img/news/portella-zoom.jpg*/
 	link: 'https://rssd.coni.it/v?k=1d8fa'
 
+    }
+,
+    {
+	id : 14 ,
+	type : 'education',
+	date : '2021/04/06',
+	title : 'BBX Virtual Dive #8',
+	body : 'Marted&#xEC; 6 Aprile dalle 20:00 alle 22:30 parleremo di subacquea, online tramite piattaforma Zoom al seguente link <a href="https://us02web.zoom.us/j/83889164822?pwd=REV2T3hBamVDaEFNT203VGFsL1VNdz09">Clicca qui ! </a><br><br>Tema della serata:<br> <bold> Preatic: Ricerca, Esplorazione e Citizen Science nelle grotte della Sardegna</bold><br><br>Per richiesta di accesso contattare tempestivamente, claudio@gue.com  ',
+	img: 'img/news/marassich_apr2021.jpg',
+	link: 'https://www.facebook.com/andrea.marassich'
+
+	//si terr&agrave; un altra sessione di Virtual Dive
     }
     
     /*
