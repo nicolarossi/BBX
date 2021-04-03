@@ -202,13 +202,19 @@ successivamente con altri interessanti incontri.</p>
 <p  ><br/>
 
 </p>
-`
-	    
-
+`   
 	    ,
 	img: 'img/news/portella-zoom.jpg',
 	link: 'https://www.facebook.com/fabio.portella.98'
-    }
+	},
+    
+	id : 13 ,
+	type : 'education',
+	date : '2021/04/02',
+	title : "Riconoscimento CONI Associazione Sportiva Dilettantistica",
+	body : 'In data REGISTRO DELLE ASSOCIAZIONI E SOCIETÀ SPORTIVE DILETTANTISTICHE IL COMITATO OLIMPICO NAZIONALE ITALIANO AI SENSI DEL DECRETO LEGISLATIVO 23 LUGLIO 1999, N.242 E SUCC. MODIFICAZIONIRICONOSCE AI FINI SPORTIVIL\'associazione senza personalità giuridica ASSOCIAZIONE SPORTIVA DILETTANTISTICA BIGBLUEXPLORERS C.F. 97847490584 con sede legalein Via dei Feltreschi 28 - 00164 Roma (RM) e legale rappresentante p.t. PROVENZANI CLAUDIO C.F. PRVCLD64B11H501B nato il 11/02/1964 a ROMA (RM) affiliata nell\'anno 2021 a:Movimento Sportivo Popolare Italia   n° RM100583 validità fino al 31/12/2021 per le discipline sportive correlate alla stagione.
+',
+	img: "img/news/Logo_CONI_2014.svg"
 
     /*
       HTML entities converter:
