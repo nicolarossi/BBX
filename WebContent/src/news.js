@@ -2,15 +2,17 @@
 function load_news( just_first ) {
     var type_inserted={};
     
-    news_list.sort(function (a,b) {
-	return (a.id < b.id) ;
-    });
+/*    news_list.sort(function (a,b) {
+     	return (a.id > b.id);
+    });*/
 
     console.log(" dentro load_news "+news_list.length+ ' ' +just_first);
    
-    for (var i=0;i<news_list.length;i++) {
-
-	var news=news_list[i];
+    for (var i=0; i<news_list.length; i++) {
+	
+//	console.log(" l = "+(news_list.length-1 -i  i)+" "+i);
+	
+	var news=news_list[ news_list.length-1 -  i ];
 	if ( ! ("type" in news) ) {
 	    console.log('ATTENZIONE l elemento '+news.id+' non ha type');
 	    return;
