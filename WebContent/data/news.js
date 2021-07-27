@@ -236,21 +236,21 @@ successivamente con altri interessanti incontri.</p>
 	id : 15 ,
 	type : 'leaf',
 	date : '2021/07/21',
-	title : 'Collaborazione con Stazione Zoologica Anton Dohrn',
-	body : 'Recentemente &#xE8; stato siglato un accordo tra l&#x27;Associazione BBX e alcuni ricercatori della &#x22;Stazione Zoologica Anton Dohrn&#x22; per una collaborazione di ricerca sulle associazioni trofiche tra antozoi marini e gasteropodi predatori nelle aree marino-costiere del Mar Mediterraneo con osservazioni sul campo, acquisizione di documentazione fotografica e video, raccolta di dati e di materiale organico rilevante ai fini della ricerca. ',
-	img: 'img/news/stazione_zoologica_anton_dohrn.png',
-	link: 'http://www.szn.it/index.php/it/'
-
+	title : 'Parlano di noi  &#127881;',
+	body : 'Mamma GUE parla di noi <br> Clicca <a href="https://www.facebook.com/90631801300/posts/10158147635236301/">qui</a> per vedere il post su facebook ',
+	img: 'img/news/logo.png',
+	link: 'https://www.facebook.com/90631801300/posts/10158147635236301/'
     }
 ,
     {
 	id : 16 ,
 	type : 'leaf',
 	date : '2021/07/21',
-	title : 'Parlano di noi  &#127881;',
-	body : 'Mamma GUE parla di noi <br> Clicca <a href="https://www.facebook.com/90631801300/posts/10158147635236301/">qui</a> per vedere il post su facebook ',
-	img: 'img/news/logo.png',
-	link: 'https://www.facebook.com/90631801300/posts/10158147635236301/'
+	title : 'Collaborazione con Stazione Zoologica Anton Dohrn',
+	body : 'Recentemente &#xE8; stato siglato un accordo tra l&#x27;Associazione BBX e alcuni ricercatori della &#x22;Stazione Zoologica Anton Dohrn&#x22; per una collaborazione di ricerca sulle associazioni trofiche tra antozoi marini e gasteropodi predatori nelle aree marino-costiere del Mar Mediterraneo con osservazioni sul campo, acquisizione di documentazione fotografica e video, raccolta di dati e di materiale organico rilevante ai fini della ricerca. ',
+	img: 'img/news/stazione_zoologica_anton_dohrn.png',
+	link: 'http://www.szn.it/index.php/it/'
+
     }
 
 
