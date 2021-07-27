@@ -248,7 +248,7 @@ successivamente con altri interessanti incontri.</p>
 	type : 'leaf',
 	date : '2021/07/21',
 	title : 'Parlano di noi  &#127881;',
-	body : 'Mamma GUE parla di noi ',
+	body : 'Mamma GUE parla di noi <br> Clicca <a href="https://www.facebook.com/90631801300/posts/10158147635236301/">qui</a> per vedere il post su facebook ',
 	img: 'img/news/logo.png',
 	link: 'https://www.facebook.com/90631801300/posts/10158147635236301/'
     }
