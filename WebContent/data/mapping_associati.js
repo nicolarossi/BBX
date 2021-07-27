@@ -97,4 +97,39 @@ associati=[
 	dpv : "",
 	female : "false"
       }
+
+    //
+    , { name : "Antonio C." ,
+	level : "Fundamental 1",
+	image : "images/associati/antonio_c.jpg",
+	female : "false"
+      }
+    , { name : "Mattia M." ,
+	level : "Tech 1",
+	image : "images/associati/mattia_m.jpg",
+	dpv: "DPV 1",
+	female : "false"
+      }
+    , { name : "Claudio S." ,
+	level : "Fundamental 1",
+	image : "images/associati/claudio_s.jpg",
+	female : "false"
+      }
+    , { name : "Raffaella P." ,
+	level : "Tech 1",
+	dpv: "DPV 1",
+	image : "images/associati/raffaella_p.jpg",
+	female : "true"
+      }
+    , { name : "Simone L." ,
+	level : "Fundamental 1",
+	image : "images/associati/simone_l.jpg",
+	female : "false"
+      }
+    , { name : "Nadia P." ,
+	level : "Rec 1",
+	image : "images/associati/nadia_p.jpg",
+	female : "true"
+      }
+
 ];
