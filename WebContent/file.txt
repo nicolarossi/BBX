@@ -1,0 +1,29 @@
+Sta partendo eclipse
+ [13:47:22 nop@montesole ~ ] 
+cd Project/BBX/
+ [14:11:17 nop@montesole ~/Project/BBX ] 
+ls
+aggiornamenti.xlsx  Doc  Slide  WebContent
+ [14:11:18 nop@montesole ~/Project/BBX ] 
+emacs . 
+^Z
+[1]+  Stopped                 emacs .
+X[14:11:28 nop@montesole ~/Project/BBX ] 
+bg
+[1]+ emacs . &
+ [14:11:29 nop@montesole ~/Project/BBX ] 
+cd WebContent/
+ [14:14:13 nop@montesole ~/Project/BBX/WebContent ] 
+ls
+argentarola.html  css      entertainment.html  images      jquery-ui-1.12.1  news.html   public              src         tool
+associati.html    data     hint.sh             img         js                pbts.html   script_carousel.sh  staff.html  update.sh
+corsi.html        default  image_not_used.sh   index.html  media             pippo.xlsx  script.sh           to_install  video
+ [14:14:14 nop@montesole ~/Project/BBX/WebContent ] 
+ls image
+ls: cannot access 'image': No such file or directory
+X[14:14:15 nop@montesole ~/Project/BBX/WebContent ] 
+ls images/
+argentarola.jpg       associati.jpg            bbx_background.png.orig  entertainment.png           news   __TYRRHENIAN_SEA
+argentarola-orig.jpg  bbx_background.png       carousel                 logo_transparent_black.png  staff
+associati             bbx_background.png.back  corsi                    logo_transparent_white.png  TS
+ [14:14:16 nop@montesole ~/Project/BBX/WebContent ] 

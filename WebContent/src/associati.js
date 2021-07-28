@@ -34,6 +34,9 @@ function load_associati() {
 	if (( 'dpv' in socio ) && ( socio.dpv != "")) {
 	    html+="<li><strong>"+socio.dpv+" Diver</strong></li>";
 	}
+	if (( 'ccr' in socio ) && ( socio.ccr != "")) {
+	    html+="<li><strong>"+socio.ccr+" Diver</strong></li>";
+	}
 
 	html+="</ul></strong>";
 	
