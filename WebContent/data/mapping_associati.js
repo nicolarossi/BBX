@@ -126,11 +126,6 @@ associati=[
 	image : "images/associati/raffaella_p.jpg",
 	female : "true"
       }
-    , { name : "Simone L." ,
-	level : "Fundamental 1",
-	image : "images/associati/simone_l.jpg",
-	female : "false"
-      }
     , { name : "Nadia P." ,
 	level : "Rec 1",
 	image : "images/associati/nadia_p.jpg",
