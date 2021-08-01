@@ -522,13 +522,13 @@ associati=[
 // "Valter Meotti"
 // "GUE Fundamental part 1"
 
-/*, { name : "Valter M." ,
+, { name : "Valter M." ,
 	level : "Fundamentals",
 	ccr : "",
 	image : "images/associati/valter_m.jpg",
 	dpv : "",
 	female : "false"
-    } */
+    }
       
 
 
