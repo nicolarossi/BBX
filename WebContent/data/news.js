@@ -252,6 +252,17 @@ successivamente con altri interessanti incontri.</p>
 	link: 'http://www.szn.it/index.php/it/'
 
     }
+,
+    {
+	id : 17 ,
+	type : 'education',
+	date : '2021/07/21',
+	title : 'Corso GUE DPVI Castellammare del Golfo TP',
+	body : 'Corso GUE DPV1 Castellammare del Golfo TP - 17-19 Settembre Istruttore GUE Claudio Provenzani - Supporto Logistico Centro Sub Atlantis Giovanni Polizzi.',
+	img: 'img/news/dpv1.jpg',
+	link: 'https://www.facebook.com/claudio.provenzani/posts/10223876249747369'
+
+    }
 
 
     
