@@ -263,6 +263,41 @@ successivamente con altri interessanti incontri.</p>
 	link: 'https://www.facebook.com/claudio.provenzani/posts/10223876249747369'
 
     }
+,
+    {
+	id : 17 ,
+	type : 'leaf',
+	date : '2021/12/04',
+	title : 'Progetto SDSS Pantelleria 2021',
+	// multiline
+	body : `<p>Dal 20 al 27 ottobre 2021 alcuni subacquei BBX hanno avuto l&#x2019;opportunit&#xE0; di partecipare ad un
+progetto di documentazione archeologica subacquea della SDSS - Societ&#xE0; per la
+Documentazione dei Siti Sommersi APS - nelle acque di Pantelleria e, nello specifico, in localit&#xE0;
+Punta Tracino a profondit&#xE0; comprese tra i 69 e gli 83 m e a Cala Levante a profondit&#xE0; comprese
+tra i 57 e gli 80 m. Il primo sito &#xE8; caratterizzato prevalentemente dalla presenza di anfore di
+diversa tipologia mentre il secondo &#xE8; caratterizzato dalla presenza di numerose ancore antiche, la
+maggior parte ceppi di piombo con alcune contro-marre, sempre in piombo.</p>
+<p>Il progetto, della durata complessiva di 2 settimane, si &#xE8; svolto sotto l&#x2019;egida della Sovrintendenza
+del Mare con numerosi sponsor che hanno supportato con i propri materiali/attrezzature molte
+delle attivit&#xE0; previste. Il supporto logistico invece &#xE8; stato fornito dal Centro Immersioni DIVE Y
+di Pantelleria.</p>
+<p>Queste due settimane sono state molto intense ed appassionanti: le giornate iniziavano la mattina
+molto presto e finivano, in perfetto stile GUE, la sera tardi. Ci sono state anche sessioni a terra di
+preparazione del materiale necessario per i rilievi subacquei ed altrettante in acqua con
+immersioni ad una profondit&#xE0; tra i 60 ed i 90 mt di durata media di 4,5 ore con permanenze sul
+fondo di 50&#x2019; - 60&#x2019;e circa 3,5 ore di decompressione. Le immersioni sono state eseguite tutte con
+rebreather JJ-CCR e RB 80. L&#x2019;insieme delle attivit&#xE0; ha portato alla documentazione di molti
+reperti archeologici in termini di foto, video, misurazioni, rilievi fotogrammetrici che presto
+verranno resi noti attraverso la Sovrintendenza del Mare.</p>
+<p>Partecipanti: Mario Arena, <a href="www.facebook.com/claudio.provenzani">Claudio Provenzani (BBX)</a>, Andrea D&#x2019;Ambrosi (BBX), Elena
+Romano (BBX), Simone Carletti (BBX), Massimiliano Sabatini (BBX), Sheila Rinaldi, Romano
+Rampazzo, Andrea Farnesi, Marco Colman, Niccol&#xF2; Crespi, Mauro Adami, Matteo Giaretta,
+Federico De Gado.</p>
+Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALANDIA</a>, <a href="www.blueprintsubsea.com">BLUEPRINT</a>, <a href="www.easydive.it">EASY DIVE</a>, <a href="www.halcyon.net">HALCYON Mfg</a>, <a href="www.coltri.com">COLTRI Compressors</a>`,
+	img: 'img/news/pantelleria_cala_tramontana.jpg',
+	link: 'https://www.facebook.com/claudio.provenzani/posts/10223876249747369'
+
+    }
 
 
     
