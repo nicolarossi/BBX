@@ -295,7 +295,7 @@ Rampazzo, Andrea Farnesi, Marco Colman, Niccol&#xF2; Crespi, Mauro Adami, Matteo
 Federico De Gado.</p>
 Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALANDIA</a>, <a href="www.blueprintsubsea.com">BLUEPRINT</a>, <a href="www.easydive.it">EASY DIVE</a>, <a href="www.halcyon.net">HALCYON Mfg</a>, <a href="www.coltri.com">COLTRI Compressors</a>`,
 	img: 'img/news/pantelleria_cala_tramontana.jpg',
-	link: 'https://www.facebook.com/claudio.provenzani/posts/10223876249747369'
+	link: 'https://www.facebook.com/claudio.provenzani/'
 
     }
 
