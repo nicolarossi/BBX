@@ -15,7 +15,7 @@ bg
 cd WebContent/
  [14:14:13 nop@montesole ~/Project/BBX/WebContent ] 
 ls
-argentarola.html  css      entertainment.html  images      jquery-ui-1.12.1  news.html   public              src         tool
+argentarola.html  css      entertainment.html  images      jquery-ui-1.13.1  news.html   public              src         tool
 associati.html    data     hint.sh             img         js                pbts.html   script_carousel.sh  staff.html  update.sh
 corsi.html        default  image_not_used.sh   index.html  media             pippo.xlsx  script.sh           to_install  video
  [14:14:14 nop@montesole ~/Project/BBX/WebContent ] 
