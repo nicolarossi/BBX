@@ -8,6 +8,14 @@ associati=[
       female : "false"
 
     }
+    
+    , { name : "Kathy M." ,
+	level : "Fundamentals",
+	ccr : "",
+	image : "images/associati/kathy_m.jpg",
+	dpv : "",
+	female : "true"
+    }
     // , { name : "Silvia M." ,
     // 	level : "Fundamentals",
     // 	image : "images/associati/Silvia_Mastrocesare.jpg",
