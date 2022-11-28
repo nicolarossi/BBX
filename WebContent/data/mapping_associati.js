@@ -24,6 +24,7 @@ associati=[
     , { name : "Maurizio C." ,
 	level : "Tech 1",
 	image : "images/associati/Maurizio.jpg",
+	ccr: "CCR 1",
 	female : "false"
       }
     , { name : "Eugenia P." ,
@@ -113,12 +114,14 @@ associati=[
 
     //
     , { name : "Antonio C." ,
-	level : "Fundamental 1",
+	level : "Tech 1",
+	dpv : "DPV 1",
 	image : "images/associati/antonio_c.jpg",
 	female : "false"
       }
     , { name : "Mattia M." ,
 	level : "Tech 1",
+	ccr: "CCR 1",
 	image : "images/associati/mattia_m.jpg",
 	dpv: "DPV 1",
 	female : "false"
