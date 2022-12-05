@@ -297,7 +297,18 @@ Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALAN
 	img: 'img/news/pantelleria_cala_tramontana.jpg',
 	link: 'https://www.facebook.com/claudio.provenzani/'
 
+    },
+    {
+	id : 18 ,
+	type : 'education',
+	date : '2022/12/05',
+	title : "Rinnovo riconoscimento CONI Associazione Sportiva Dilettantistica",
+	body : "e' stato rinnovato presso il REGISTRO DELLE ASSOCIAZIONI E SOCIETÀ SPORTIVE DILETTANTISTICHE IL COMITATO OLIMPICO NAZIONALE ITALIANO AI SENSI DEL DECRETO LEGISLATIVO 23 LUGLIO 1999, N.242 E SUCC. MODIFICAZIONI IL RICONOSCIMENTO AI FINI SPORTIVI<br> Dell’associazione senza personalità giuridica ASSOCIAZIONE SPORTIVA DILETTANTISTICA BIGBLUEXPLORERS C.F. 97847490584 con sede legale in Via dei Feltreschi 28 - 00164 Roma (RM) e legale rappresentante p.t. PROVENZANI CLAUDIO C.F. PRVCLD64B11H501B nato il 11/02/1964 a ROMA (RM) affiliata nell’anno 2021 a: Movimento Sportivo Popolare Italia n° RM100583 validità fino al 31/12/2022 per le discipline sportive correlate alla stagione.",
+	/**/
+	img: "img/news/Logo_CONI_2014.svg",
+	link: 'https://rssd.coni.it/'
     }
+,
 
 
     
