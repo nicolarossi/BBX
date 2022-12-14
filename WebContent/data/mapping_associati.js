@@ -539,7 +539,17 @@ associati=[
 	image : "images/associati/valter_m.jpg",
 	dpv : "",
 	female : "false"
-    }
+  }
+    ,
+
+, { name : "Stefano R." ,
+	level : "Fundamentals",
+	ccr : "",
+	image : "images/associati/stefano_r.jpg",
+	dpv : "",
+	female : "false"
+  }
+    
       
 
 
