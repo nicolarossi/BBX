@@ -309,6 +309,15 @@ Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALAN
 	link: 'https://rssd.coni.it/'
     }
 ,
+    {
+	id : 19 ,
+	type : 'leaf',
+	date : '2022/12/13',
+	title : "Difendiamo l'ambiente",
+	/**/
+	img: "img/news/santa_marinella.jpg",
+//	link: 'https://rssd.coni.it/'
+    }
 
 
     

@@ -6,7 +6,7 @@ function load_news( just_first ) {
      	return (a.id > b.id);
     });*/
 
-    console.log(" dentro load_news "+news_list.length+ ' ' +just_first);
+   // console.log(" dentro load_news "+news_list.length+ ' ' +just_first);
    
     for (var i=0; i<news_list.length; i++) {
 	
@@ -17,7 +17,7 @@ function load_news( just_first ) {
 	    console.log('ATTENZIONE l elemento '+news.id+' non ha type');
 	    return;
 	}
-	console.log(" dentro load_news "+i+' : '+JSON.stringify(news));
+//	console.log(" dentro load_news "+i+' : '+JSON.stringify(news));
 
 	/**/
 
@@ -38,9 +38,13 @@ function load_news( just_first ) {
 
 	var html=" "
 	var col_text=12
+	var col_img=4
 	html+='<div class="row">'
 	if ('img' in news) {
 	    col_text=8
+	}
+	if ( !( 'body'  in news))  {
+	    col_img=12
 	}
 
 	if ('body' in news) {
@@ -48,12 +52,11 @@ function load_news( just_first ) {
 	}
 	if ('img' in news) {
 	    if ('link' in news) {
-		html+="<div class='col-xs-4'><a href='"+news.link+"'><img class='img img-responsive img-rounded' src='"+news.img+"'></a><br><strong><ul></div>"		
+		html+="<div class='col-xs-"+col_img+"'><a href='"+news.link+"'><img class='img img-responsive img-rounded' src='"+news.img+"'></a><br><strong><ul></div>"		
 	    } else {
-		html+="<div class='col-xs-4'><img class='img img-responsive img-rounded' src='"+news.img+"'><br><strong><ul></div>"
+		html+="<div class='col-xs-"+col_img+"'><img class='img img-responsive img-rounded' src='"+news.img+"'><br><strong><ul></div>"
 	    }
 
-	    col_text=8
 	}
 	if ('vimeo' in news) {
 	    html+="<div class='embed-container'><iframe src='"+news.vimeo+"' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>"
