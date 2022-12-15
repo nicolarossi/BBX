@@ -6,3 +6,5 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+.font-italic        { font-style: italic !important; }
