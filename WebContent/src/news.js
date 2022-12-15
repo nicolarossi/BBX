@@ -77,8 +77,7 @@ function load_news( just_first, target_container, target_list ) {
 	    } else {
 		html+="<div class='col-xs-"+col_img+"'><img class='img img-responsive img-rounded' src='"+news.img+"'><br><strong><ul></div>"
 	    }
-
-	}
+	} 
 	if ('vimeo' in news) {
 	    html+="<div class='embed-container'><iframe src='"+news.vimeo+"' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>"
 	}
@@ -96,12 +95,23 @@ function load_news( just_first, target_container, target_list ) {
 		html_footer+=("<strong>"+news.date+"</strong>");
 	    }
 	    html_footer+="</br>"
-	    
-	    
+	    	    
 	    footer.html(html_footer);
-	    panel.append(header,body,footer);
+	    panel.append(header,body, footer);
+
 	} else {
-	    panel.append(header,body);
+	    if ('link' in news ) {
+		var footer=$("<div class='panel-footer'></div>");
+		html_footer=""
+		html_footer+="<div class='col-xs-"+col_img+"'><a href='"+news.link+"'>"+news.link+"</a></div>";
+		html_footer+="</br>"
+
+		footer.html(html_footer);
+
+		panel.append(header,body, footer);
+	    } else {
+		panel.append(header,body);
+	    }
 	}
 
 	el.append(panel);
