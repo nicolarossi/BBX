@@ -117,7 +117,7 @@ poster_list=[
     },
     {
 	id :  5,	
-	authors : '<u>Provenzani C.</u>, <u>Appodia F.</u>, <u>Corirossi M.</u>, Gassi M.A., <u>Papini M.</u>, <u>Pasanisi E.</u>, Ricci E., <u>Romano E<.u>, <u>Rossi N.</u>',
+	authors : '<u>Provenzani C.</u>, <u>Appodia F.</u>, <u>Corirossi M.</u>, Gassi M.A., <u>Papini M.</u>, <u>Pasanisi E.</u>, Ricci E., <u>Romano E.</u>, <u>Rossi N.</u>',
 	date : '2018',
 	research_title : "Project Baseline Tyrrhenian Sea as citizen scienze project for supporting the knowledge about marine areas status.",
 	where : '4th European Conference on “Scientific Diving”. Orkney islands (UK), 9-12 April 2018.',
