@@ -134,21 +134,21 @@ poster_list=[
 	authors : '<u>Romano E.</u>, Bergamin L., Pierfranceschi G., Berto D., <u>Provenzani C.</u>, Marassich A.',
 	date : '2015',
 	research_title : "The environmental characterization in Bue Marino cave (Sardinia, Italy) using benthic foraminifera.",
-	where : 'International Congress “GeoSUB – Underwater geology”. Trieste, 13-14 October 2015',
+	where : 'International Congress “GeoSUB – Underwater geology”. Trieste, 13-14 October ',
     },
     {
 	id :  2,	
 	authors : 'Mo G., <u>Provenzani C.</u>, Marassich A., <u>Romano E.</u>',
 	date : '2015',
 	research_title : "Characterization of Mediterranean monk seal (Monachus monachus) bones in Bel Torrente cave (Sardinia, Italy)",
-	where : 'International Congress “GeoSUB – Underwater geology”. Trieste, 13-14 October 2015',
+	where : 'International Congress “GeoSUB – Underwater geology”. Trieste, 13-14 October ',
     },
     {
 	id :  1,	
 	authors : 'Bergamin L., <u>Romano E.</u>, Celia Magno M., Berto D., <u>Provenzani C.</u>, Marassich A.',
 	date : '2015',
 	research_title : "The environmental characterization in Bue Marino cave (Sardinia, Italy) using benthic foraminifera.",
-	where : 'International Congress “GeoSUB – Underwater geology”. Trieste, 13-14 October 2015.',
+	where : 'International Congress “GeoSUB – Underwater geology”. Trieste, 13-14 October .',
     },
     
 ];
