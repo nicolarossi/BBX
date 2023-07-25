@@ -317,9 +317,21 @@ Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALAN
 	/**/
 	img: "img/news/santa_marinella.jpg",
 //	link: 'https://rssd.coni.it/'
+    },
+
+
+    {
+	id : 20 ,
+	type : 'education',
+	date : '2023/07/25',
+	title : "Rinnovo CONI Associazione Sportiva Dilettantistica",
+	body : "In data 25/7/2023 presso il REGISTRO DELLE ASSOCIAZIONI E SOCIETÀ SPORTIVE DILETTANTISTICHE IL COMITATO OLIMPICO NAZIONALE ITALIANO AI SENSI DEL DECRETO LEGISLATIVO 23 LUGLIO 1999, N.242 E SUCC. MODIFICAZIONI RICONOSCE AI FINI SPORTIVI<br> L’associazione senza personalità giuridica ASSOCIAZIONE SPORTIVA DILETTANTISTICA BIGBLUEXPLORERS C.F. 97847490584 con sede legale in Via dei Feltreschi 28 - 00164 Roma (RM) e legale rappresentante p.t. PROVENZANI CLAUDIO C.F. PRVCLD64B11H501B nato il 11/02/1964 a ROMA (RM) affiliata nell’anno 2023 a: Movimento Sportivo Popolare Italia n° RM100583 validità fino al 31/12/2023 per le discipline sportive correlate alla stagione.",
+	/**/
+	img: "img/news/Logo_CONI_2014.svg",
+	/* img/news/portella-zoom.jpg*/
+	link: 'https://rssd.coni.it/v?k=1d8fa'
+
     }
-
-
     
     
     /*
