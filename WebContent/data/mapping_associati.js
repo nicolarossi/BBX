@@ -131,12 +131,12 @@ associati=[
 	image : "images/associati/claudio_s.jpg",
 	female : "false"
       }
-    , { name : "Raffaella P." ,
-	level : "Tech 1",
-	dpv: "DPV 1",
-	image : "images/associati/raffaella_p.jpg",
-	female : "true"
-      }
+    // , { name : "Raffaella P." ,
+    // 	level : "Tech 1",
+    // 	dpv: "DPV 1",
+    // 	image : "images/associati/raffaella_p.jpg",
+    // 	female : "true"
+    //   }
     , { name : "Nadia P." ,
 	level : "Fundamental",
 	image : "images/associati/nadia_p.jpg",
