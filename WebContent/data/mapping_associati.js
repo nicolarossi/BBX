@@ -55,11 +55,11 @@ associati=[
 	dpv : "DPV 1 ",
 	female : "false"
       }
-    , { name : "Flavia A." ,
-	level : "Tech 1",
-	image : "images/associati/flavia.jpg",
-	female : "true"
-      }
+    // , { name : "Flavia A." ,
+    // 	level : "Tech 1",
+    // 	image : "images/associati/flavia.jpg",
+    // 	female : "true"
+    //   }
     , { name : "Cristiano S." ,
 	level : "Tech 2 ",
 	image : "images/associati/cristiano_s.jpg",
