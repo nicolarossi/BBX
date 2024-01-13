@@ -21,12 +21,12 @@ associati=[
     // 	image : "images/associati/Silvia_Mastrocesare.jpg",
     // 	female : "true"
     //   }
-    , { name : "Maurizio C." ,
-	level : "Tech 1",
-	image : "images/associati/Maurizio.jpg",
-	ccr: "CCR 1",
-	female : "false"
-      }
+    // , { name : "Maurizio C." ,
+    // 	level : "Tech 1",
+    // 	image : "images/associati/Maurizio.jpg",
+    // 	ccr: "CCR 1",
+    // 	female : "false"
+    //   }
     , { name : "Eugenia P." ,
 	level : "Fundamentals",
 	image : "images/associati/eugenia.jpg",
