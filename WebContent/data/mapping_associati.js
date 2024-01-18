@@ -27,7 +27,6 @@ associati=[
     // 	ccr: "CCR 1",
     // 	female : "false"
     //   }
-    //
     , { name : "Eugenia P." ,
 	level : "Fundamentals",
 	image : "images/associati/eugenia.jpg",
