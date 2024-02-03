@@ -151,11 +151,11 @@ associati=[
 	image : "images/staff/antonio_pietrini.jpg",
 	female : "false"
       }
-    , { name : "Simone L." ,
-	level : "Fundamental 1",
-	image : "images/associati/simone_l.jpg",
-	female : "false"
-      }
+    // , { name : "Simone L." ,
+    // 	level : "Fundamental 1",
+    // 	image : "images/associati/simone_l.jpg",
+    // 	female : "false"
+    //   }
 
       
 // "Alberto Leoni"
