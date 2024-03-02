@@ -94,11 +94,19 @@ associati=[
 	female : "false"
       }
     // , { name : "Massimo P." ,
+<<<<<<< HEAD
     // 	level : "Tech 1",
     // 	ccr : "CCR 1",
     // 	image : "images/associati/massimo_p.jpg",
     // 	dpv : "DPV 1 ",
     // 	female : "false"
+=======
+	// level : "Tech 1",
+	// ccr : "CCR 1",
+	// image : "images/associati/massimo_p.jpg",
+	// dpv : "DPV 1 ",
+	// female : "false"
+>>>>>>> d8d4e2c518999036d261f55d73ccc8c71e29b472
     //   }
     // , { name : "Mattia B." ,
     // 	level : "Tech 1",
@@ -144,13 +152,13 @@ associati=[
       }
 
     //
-    , { name : "Antonio P." ,
-	level : "Tech 1",
-	cave: "Cave 2",
-	dpv: "DPV Cave",
-	image : "images/staff/antonio_pietrini.jpg",
-	female : "false"
-      }
+    // , { name : "Antonio P." ,
+	// level : "Tech 1",
+	// cave: "Cave 2",
+	// dpv: "DPV Cave",
+	// image : "images/staff/antonio_pietrini.jpg",
+	// female : "false"
+    //   }
     // , { name : "Simone L." ,
     // 	level : "Fundamental 1",
     // 	image : "images/associati/simone_l.jpg",
