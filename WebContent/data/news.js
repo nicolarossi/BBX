@@ -334,7 +334,7 @@ Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALAN
     },
     
     {
-	id : 23,
+	id : 21,
 	type : 'education',
 	date : '2021/07/05',
 	title : "Rinnovo CONI Associazione Sportiva Dilettantistica",
