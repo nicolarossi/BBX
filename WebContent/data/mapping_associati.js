@@ -10,7 +10,7 @@ associati=[
     }
     
     , { name : "Kathy M." ,
-	level : "Fundamentals",
+	level : "Tech 1",
 	ccr : "",
 	image : "images/associati/kathy_m.jpg",
 	dpv : "",
@@ -27,11 +27,11 @@ associati=[
     // 	ccr: "CCR 1",
     // 	female : "false"
     //   }
-    , { name : "Eugenia P." ,
-	level : "Fundamentals",
-	image : "images/associati/eugenia.jpg",
-	female : "true"
-      }
+    // , { name : "Eugenia P." ,
+    // 	level : "Fundamentals",
+    // 	image : "images/associati/eugenia.jpg",
+    // 	female : "true"
+    //   }
     // , { name : "Marco A.G." ,
     // 	level : "Tech 1",
     // 	image : "images/associati/gonzalo.jpg",
@@ -60,13 +60,13 @@ associati=[
     // 	image : "images/associati/flavia.jpg",
     // 	female : "true"
     //   }
-    , { name : "Cristiano S." ,
-	level : "Tech 2 ",
-	image : "images/associati/cristiano_s.jpg",
-	cave : "Cave 1",
-	dpv : "DPV 1 ",
-	female : "false"
-      }
+    // , { name : "Cristiano S." ,
+    // 	level : "Tech 2 ",
+    // 	image : "images/associati/cristiano_s.jpg",
+    // 	cave : "Cave 1",
+    // 	dpv : "DPV 1 ",
+    // 	female : "false"
+    //   }
     // , { name : "Emiliano R." ,
     // 	level : "Tech 2",
     // 	ccr : "CCR 1",
@@ -81,7 +81,7 @@ associati=[
 	female : "false"
       }
     , { name : "Alfredo C." ,
-	level : "Rec 3",
+	level : "Tech 1",
 	image : "images/associati/alfredo.jpg",
 	dpv : "DPV 1 ",
 	female : "false"
@@ -108,7 +108,7 @@ associati=[
     , { name : "Giovanni P." ,
 	level : "Tech 1",
 	image : "images/associati/giovanni_p.jpg",
-	dpv : "",
+	dpv : "DPV 1",
 	female : "false"
       }
 
@@ -116,6 +116,7 @@ associati=[
     , { name : "Antonio C." ,
 	level : "Tech 1",
 	dpv : "DPV 1",
+	ccr: "CCR 1",
 	image : "images/associati/antonio_c.jpg",
 	female : "false"
       }
