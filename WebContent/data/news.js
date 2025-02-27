@@ -333,19 +333,31 @@ Sponsor: <a href="www.suex.it">SUEX</a>,  <a href="www.scubalandia.com">SCUBALAN
 
     },
     
+    // {
+    // 	id : 21,
+    // 	type : 'education',
+    // 	date : '2021/07/05',
+    // 	title : "Rinnovo CONI Associazione Sportiva Dilettantistica",
+    // 	body : "In data 5/7/2024 presso il REGISTRO NAZIONALE DELLE ATTIVITÀ SPORTIVE DILETTANTISTICHE AI SENSI DEL DECRETO LEGISLATIVO 39/2021<br> L’associazione senza personalità giuridica ASSOCIAZIONE SPORTIVA DILETTANTISTICA BIGBLUEXPLORERS C.F. 97847490584 con sede legale in Via dei Feltreschi 28 - 00164 Roma (RM) e legale rappresentante p.t. PROVENZANI CLAUDIO C.F. PRVCLD64B11H501B nato il 11/02/1964 a ROMA (RM) affiliata nell’anno 2021 a: Movimento Sportivo Popolare Italia n° RM100583 validità fino al 31/12/2024 per le discipline sportive correlate alla stagione.",
+    // 	/**/
+    // 	img: "img/news/Logo_CONI_2014.svg",
+    // 	/* img/news/portella-zoom.jpg*/
+    // 	link: 'data/certificato_iscrizione.pdf'
+    // }
+    // ,    
     {
 	id : 21,
 	type : 'education',
-	date : '2021/07/05',
+	date : '2025/02/27',
 	title : "Rinnovo CONI Associazione Sportiva Dilettantistica",
-	body : "In data 5/7/2024 presso il REGISTRO NAZIONALE DELLE ATTIVITÀ SPORTIVE DILETTANTISTICHE AI SENSI DEL DECRETO LEGISLATIVO 39/2021<br> L’associazione senza personalità giuridica ASSOCIAZIONE SPORTIVA DILETTANTISTICA BIGBLUEXPLORERS C.F. 97847490584 con sede legale in Via dei Feltreschi 28 - 00164 Roma (RM) e legale rappresentante p.t. PROVENZANI CLAUDIO C.F. PRVCLD64B11H501B nato il 11/02/1964 a ROMA (RM) affiliata nell’anno 2021 a: Movimento Sportivo Popolare Italia n° RM100583 validità fino al 31/12/2024 per le discipline sportive correlate alla stagione.",
+	body : "Presso il REGISTRO NAZIONALE DELLE ATTIVITÀ SPORTIVE DILETTANTISTICHE AI SENSI DEL DECRETO LEGISLATIVO 39/2021<br> L’associazione senza personalità giuridica ASSOCIAZIONE SPORTIVA DILETTANTISTICA BIGBLUEXPLORERS C.F. 97847490584 con sede legale in Via dei Feltreschi 28 - 00164 Roma (RM) e legale rappresentante p.t. PROVENZANI CLAUDIO C.F. PRVCLD64B11H501B nato il 11/02/1964 a ROMA (RM) affiliata nell’anno 2025 a: Movimento Sportivo Popolare Italia n° RM100583 validità fino al 31/12/2025 per le discipline sportive correlate alla stagione.",
 	/**/
 	img: "img/news/Logo_CONI_2014.svg",
 	/* img/news/portella-zoom.jpg*/
-	link: 'data/certificato_iscrizione.pdf'
+	link: 'data/certificato_iscrizione_2025.pdf'
 
     }
-,
+
     
     /*
       HTML entities converter:
